@@ -16,15 +16,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        
-//        https://www.topcoder.com/blog/notifications-in-ios-8-using-swift/
-        //        UIUserNotificationType.Sound | UIUserNotificationType.Alert | UIUserNotificationType.Badge
-        
-
-        application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: UIUserNotificationType.Alert, categories: nil))
-        
+        registerNotificationSettings()
         
         return true
+    }
+    
+    func registerNotificationSettings() {
+        // see: https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/BasicSupport.html#//apple_ref/doc/uid/TP40014969-CH18-SW1
+
+        var categories = Set<UIUserNotificationCategory>()
+        
+        let acceptAction = UIMutableUserNotificationAction()
+        acceptAction.title = NSLocalizedString("Accept", comment: "Accept Invitation")
+        acceptAction.identifier = "accept"
+        acceptAction.activationMode = UIUserNotificationActivationMode.Foreground
+        acceptAction.authenticationRequired = false
+  
+        let category = UIMutableUserNotificationCategory()
+        category.setActions([acceptAction], forContext: UIUserNotificationActionContext.Default)
+        category.setActions([acceptAction], forContext: UIUserNotificationActionContext.Minimal)
+        category.identifier = "INVITATION_CATEGORY"
+        categories.insert(category)
+        
+//        (UIUserNotificationType.Alert | UIUserNotificationType.Badge | UIUserNotificationType.Sound)
+        let settings = UIUserNotificationSettings(forTypes: UIUserNotificationType.Alert, categories: categories)
+        
+        UIApplication.sharedApplication().registerUserNotificationSettings(settings)
     }
 
     func applicationWillResignActive(application: UIApplication) {

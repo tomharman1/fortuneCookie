@@ -12,14 +12,11 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-//        types = UIUserNotificationTypeBadge | UIUserNotificationTypeSound |
-//        mySettings = UIUserNotificationSettings.init(forTypes: types, categories: nil)
 
         let firstLocalNotification = UILocalNotification()
-        firstLocalNotification.alertAction = "testing notifications"
-        firstLocalNotification.alertBody = "body here"
+//        firstLocalNotification.alertAction = "testing notifications"
+        firstLocalNotification.alertBody = "Your Fortune Cookie is here!"
+        firstLocalNotification.category = "INVITATION_CATEGORY"
         firstLocalNotification.fireDate = NSDate(timeIntervalSinceNow: 10)
         UIApplication.sharedApplication().scheduleLocalNotification(firstLocalNotification)
     }

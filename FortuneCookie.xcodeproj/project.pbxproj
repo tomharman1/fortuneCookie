@@ -24,7 +24,7 @@
 		F8AF8A511BA5E5CD00FB0BAB /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AF8A501BA5E5CD00FB0BAB /* GlanceController.swift */; };
 		F8AF8A531BA5E5CD00FB0BAB /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AF8A521BA5E5CD00FB0BAB /* ComplicationController.swift */; };
 		F8AF8A551BA5E5CD00FB0BAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8AF8A541BA5E5CD00FB0BAB /* Assets.xcassets */; };
-		F8DA7EA81BA62E5100A07409 /* FortunesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DA7EA71BA62E5100A07409 /* FortunesModel.swift */; settings = {ASSET_TAGS = (); }; };
+		F8DA7EA81BA62E5100A07409 /* FortunesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DA7EA71BA62E5100A07409 /* FortunesModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -337,6 +337,12 @@
 				TargetAttributes = {
 					F8AF8A0B1BA5E5CC00FB0BAB = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 5YFM8BW7RJ;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					F8AF8A1F1BA5E5CC00FB0BAB = {
 						CreatedOnToolsVersion = 7.0;
@@ -659,10 +665,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FortuneCookie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tomharman.me.FortuneCookie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
@@ -671,10 +680,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FortuneCookie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tomharman.me.FortuneCookie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
