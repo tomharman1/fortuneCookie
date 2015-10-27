@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F844394D1BDF38890000A2A2 /* FortuneInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F844394C1BDF38890000A2A2 /* FortuneInterfaceController.swift */; };
 		F8AF8A101BA5E5CC00FB0BAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AF8A0F1BA5E5CC00FB0BAB /* AppDelegate.swift */; };
 		F8AF8A121BA5E5CC00FB0BAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AF8A111BA5E5CC00FB0BAB /* ViewController.swift */; };
 		F8AF8A151BA5E5CC00FB0BAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8AF8A131BA5E5CC00FB0BAB /* Main.storyboard */; };
@@ -23,7 +24,6 @@
 		F8AF8A4F1BA5E5CD00FB0BAB /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AF8A4E1BA5E5CD00FB0BAB /* NotificationController.swift */; };
 		F8AF8A511BA5E5CD00FB0BAB /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AF8A501BA5E5CD00FB0BAB /* GlanceController.swift */; };
 		F8AF8A531BA5E5CD00FB0BAB /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AF8A521BA5E5CD00FB0BAB /* ComplicationController.swift */; };
-		F8AF8A551BA5E5CD00FB0BAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8AF8A541BA5E5CD00FB0BAB /* Assets.xcassets */; };
 		F8DA7EA81BA62E5100A07409 /* FortunesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DA7EA71BA62E5100A07409 /* FortunesModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +84,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F844394C1BDF38890000A2A2 /* FortuneInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FortuneInterfaceController.swift; sourceTree = "<group>"; };
 		F8AF8A0C1BA5E5CC00FB0BAB /* FortuneCookie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FortuneCookie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8AF8A0F1BA5E5CC00FB0BAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8AF8A111BA5E5CC00FB0BAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -108,7 +109,6 @@
 		F8AF8A4E1BA5E5CD00FB0BAB /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		F8AF8A501BA5E5CD00FB0BAB /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
 		F8AF8A521BA5E5CD00FB0BAB /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
-		F8AF8A541BA5E5CD00FB0BAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8AF8A561BA5E5CD00FB0BAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8DA7EA71BA62E5100A07409 /* FortunesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FortunesModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -218,10 +218,10 @@
 				F8AF8A4E1BA5E5CD00FB0BAB /* NotificationController.swift */,
 				F8AF8A501BA5E5CD00FB0BAB /* GlanceController.swift */,
 				F8AF8A521BA5E5CD00FB0BAB /* ComplicationController.swift */,
-				F8AF8A541BA5E5CD00FB0BAB /* Assets.xcassets */,
 				F8AF8A561BA5E5CD00FB0BAB /* Info.plist */,
 				F8AF8A481BA5E5CD00FB0BAB /* Supporting Files */,
 				F8DA7EA71BA62E5100A07409 /* FortunesModel.swift */,
+				F844394C1BDF38890000A2A2 /* FortuneInterfaceController.swift */,
 			);
 			path = "FortuneCookie WatchKit Extension";
 			sourceTree = "<group>";
@@ -420,7 +420,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8AF8A551BA5E5CD00FB0BAB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +456,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8AF8A4F1BA5E5CD00FB0BAB /* NotificationController.swift in Sources */,
+				F844394D1BDF38890000A2A2 /* FortuneInterfaceController.swift in Sources */,
 				F8DA7EA81BA62E5100A07409 /* FortunesModel.swift in Sources */,
 				F8AF8A4D1BA5E5CD00FB0BAB /* ExtensionDelegate.swift in Sources */,
 				F8AF8A531BA5E5CD00FB0BAB /* ComplicationController.swift in Sources */,
