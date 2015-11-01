@@ -32,23 +32,23 @@
             <objects>
                 <controller id="B8O-bd-VEr" customClass="FortuneInterfaceController" customModule="FortuneCookie_WatchKit_Extension">
                     <items>
-                        <button width="1" alignment="left" backgroundImage="fortune-guy-2" id="70k-x4-Or9">
+                        <label width="1" alignment="center" verticalAlignment="center" text="What ever you're goal is in life, embrace it visualize it, and for it will be yours." textAlignment="center" numberOfLines="4" minimumScaleFactor="0.69999999999999996" id="Phm-il-Rwd">
+                            <fontDescription key="font" type="system" pointSize="10"/>
+                        </label>
+                        <button alignment="center" verticalAlignment="bottom" backgroundImage="fortune-guy-speech-bubble" id="70k-x4-Or9">
                             <connections>
                                 <action selector="fortuneCookieBtnTapped" destination="B8O-bd-VEr" id="jUH-bh-KNd"/>
                             </connections>
                         </button>
-                        <label width="136" height="47.5" alignment="left" text="You learn from your mistakes... You will learn a lot today." textAlignment="center" numberOfLines="3" minimumScaleFactor="0.59999999999999998" id="Phm-il-Rwd">
-                            <fontDescription key="font" type="system" pointSize="10"/>
-                        </label>
                     </items>
-                    <edgeInsets key="margins" left="5" right="5" top="0.0" bottom="0.0"/>
+                    <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
                     <connections>
                         <outlet property="fortuneCookieButton" destination="70k-x4-Or9" id="Bbh-rw-Jhr"/>
                         <outlet property="fortuneLabel" destination="Phm-il-Rwd" id="smx-jU-oFn"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="484" y="347.25"/>
+            <point key="canvasLocation" x="484" y="346"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="BOz-TT-tkC">
