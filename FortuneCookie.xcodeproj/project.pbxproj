@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F806EE411BE1E7F600E3C671 /* db.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F806EE3F1BE1E7F600E3C671 /* db.xcdatamodeld */; };
 		F844394D1BDF38890000A2A2 /* FortuneInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F844394C1BDF38890000A2A2 /* FortuneInterfaceController.swift */; };
 		F8AF8A101BA5E5CC00FB0BAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AF8A0F1BA5E5CC00FB0BAB /* AppDelegate.swift */; };
 		F8AF8A121BA5E5CC00FB0BAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AF8A111BA5E5CC00FB0BAB /* ViewController.swift */; };
@@ -85,8 +84,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		F806EE401BE1E7F600E3C671 /* db.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = db.xcdatamodel; sourceTree = "<group>"; };
 		F844394C1BDF38890000A2A2 /* FortuneInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FortuneInterfaceController.swift; sourceTree = "<group>"; };
+		F86929431BE6DD1400F5A221 /* FortuneCookie.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = FortuneCookie.entitlements; sourceTree = "<group>"; };
 		F8AF8A0C1BA5E5CC00FB0BAB /* FortuneCookie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FortuneCookie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8AF8A0F1BA5E5CC00FB0BAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8AF8A111BA5E5CC00FB0BAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -174,6 +173,7 @@
 		F8AF8A0E1BA5E5CC00FB0BAB /* FortuneCookie */ = {
 			isa = PBXGroup;
 			children = (
+				F86929431BE6DD1400F5A221 /* FortuneCookie.entitlements */,
 				F8AF8A0F1BA5E5CC00FB0BAB /* AppDelegate.swift */,
 				F8AF8A111BA5E5CC00FB0BAB /* ViewController.swift */,
 				F8AF8A131BA5E5CC00FB0BAB /* Main.storyboard */,
@@ -224,7 +224,6 @@
 				F8AF8A481BA5E5CD00FB0BAB /* Supporting Files */,
 				F8DA7EA71BA62E5100A07409 /* FortunesModel.swift */,
 				F844394C1BDF38890000A2A2 /* FortuneInterfaceController.swift */,
-				F806EE3F1BE1E7F600E3C671 /* db.xcdatamodeld */,
 			);
 			path = "FortuneCookie WatchKit Extension";
 			sourceTree = "<group>";
@@ -343,7 +342,7 @@
 						DevelopmentTeam = 5YFM8BW7RJ;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};
@@ -463,7 +462,6 @@
 				F8DA7EA81BA62E5100A07409 /* FortunesModel.swift in Sources */,
 				F8AF8A4D1BA5E5CD00FB0BAB /* ExtensionDelegate.swift in Sources */,
 				F8AF8A531BA5E5CD00FB0BAB /* ComplicationController.swift in Sources */,
-				F806EE411BE1E7F600E3C671 /* db.xcdatamodeld in Sources */,
 				F8AF8A4B1BA5E5CD00FB0BAB /* InterfaceController.swift in Sources */,
 				F8AF8A511BA5E5CD00FB0BAB /* GlanceController.swift in Sources */,
 			);
@@ -669,6 +667,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FortuneCookie/FortuneCookie.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FortuneCookie/Info.plist;
@@ -684,6 +683,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FortuneCookie/FortuneCookie.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FortuneCookie/Info.plist;
@@ -801,19 +801,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		F806EE3F1BE1E7F600E3C671 /* db.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				F806EE401BE1E7F600E3C671 /* db.xcdatamodel */,
-			);
-			currentVersion = F806EE401BE1E7F600E3C671 /* db.xcdatamodel */;
-			path = db.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = F8AF8A041BA5E5CC00FB0BAB /* Project object */;
 }

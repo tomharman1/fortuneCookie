@@ -9,7 +9,6 @@
 import WatchKit
 import Foundation
 
-
 class FortuneInterfaceController: WKInterfaceController {
     
     @IBOutlet var fortuneLabel: WKInterfaceLabel!
@@ -17,6 +16,8 @@ class FortuneInterfaceController: WKInterfaceController {
     @IBOutlet var fortuneCookieButton: WKInterfaceButton!
 
     let fortunesModel = FortunesModel()
+    
+    let userDefaults = NSUserDefaults(suiteName:"group.com.tomharman.me.FortuneCookie.userdefaults")
 
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
@@ -35,6 +36,28 @@ class FortuneInterfaceController: WKInterfaceController {
     }
 
     @IBAction func fortuneCookieBtnTapped() {
-        self.fortuneLabel.setText(self.fortunesModel.getFortune())
+        print("can show fortune: \(self.canShowFortune())")
+        if (self.canShowFortune()) {
+            self.saveFortuneLastAccessedDate()
+            self.fortuneLabel.setText(self.fortunesModel.getFortune())
+        }
+    }
+    
+    func saveFortuneLastAccessedDate() {
+        let today = NSDate()
+        userDefaults?.setObject(today, forKey: "lastFortuneAccessedDate")
+    }
+    
+    func canShowFortune()-> Bool {
+        let fortuneLastAccessedDate = userDefaults?.objectForKey("lastFortuneAccessedDate") as! NSDate
+//        let hoursElapsedSinceLastFortuneAccessed = fortuneLastAccessedDate.timeIntervalSinceNow / (60 * 60)
+        let secondsElapsedSinceLastFortuneAccessed = NSDate().timeIntervalSinceDate(fortuneLastAccessedDate)
+        
+        if (secondsElapsedSinceLastFortuneAccessed > 5) {
+            return true
+        }
+        else {
+            return false
+        }
     }
 }
