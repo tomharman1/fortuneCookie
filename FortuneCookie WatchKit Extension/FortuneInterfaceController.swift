@@ -40,6 +40,11 @@ class FortuneInterfaceController: WKInterfaceController {
         if (self.canShowFortune()) {
             self.saveFortuneLastAccessedDate()
             self.fortuneLabel.setText(self.fortunesModel.getFortune())
+            self.fortuneCookieButton.setBackgroundImageNamed("fortune-guy-speech-bubble")
+        }
+        else {
+            self.fortuneLabel.setText("Wow, you're greedy!\n Come back tomorrow for your next fortune")
+            self.fortuneCookieButton.setBackgroundImageNamed("fortune-guy-greedy")
         }
     }
     
