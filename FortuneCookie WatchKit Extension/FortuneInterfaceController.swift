@@ -54,9 +54,13 @@ class FortuneInterfaceController: WKInterfaceController {
     }
     
     func canShowFortune()-> Bool {
-        let fortuneLastAccessedDate = userDefaults?.objectForKey("lastFortuneAccessedDate") as! NSDate
+        let fortuneLastAccessedDate = userDefaults?.objectForKey("lastFortuneAccessedDate")
+        if (fortuneLastAccessedDate == nil) {
+            return true // no previosuly saved date
+        }
+
 //        let hoursElapsedSinceLastFortuneAccessed = fortuneLastAccessedDate.timeIntervalSinceNow / (60 * 60)
-        let secondsElapsedSinceLastFortuneAccessed = NSDate().timeIntervalSinceDate(fortuneLastAccessedDate)
+        let secondsElapsedSinceLastFortuneAccessed = NSDate().timeIntervalSinceDate(fortuneLastAccessedDate as! NSDate)
         
         if (secondsElapsedSinceLastFortuneAccessed > 5) {
             return true
