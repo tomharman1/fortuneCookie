@@ -32,8 +32,8 @@
             <objects>
                 <controller id="B8O-bd-VEr" customClass="FortuneInterfaceController" customModule="FortuneCookie_WatchKit_Extension">
                     <items>
-                        <label width="1" alignment="center" verticalAlignment="center" text="What ever you're goal is in life, embrace it visualize it, and for it will be yours." textAlignment="center" numberOfLines="4" minimumScaleFactor="0.69999999999999996" id="Phm-il-Rwd">
-                            <fontDescription key="font" type="system" pointSize="10"/>
+                        <label width="1" height="51" alignment="center" verticalAlignment="center" text="What ever you're goal is in life, embrace it visualize it, and for it will be yours. One more line One more line One" textAlignment="center" numberOfLines="4" minimumScaleFactor="0.69999999999999996" id="Phm-il-Rwd">
+                            <fontDescription key="font" type="system" pointSize="12"/>
                         </label>
                         <button alignment="center" verticalAlignment="bottom" backgroundImage="fortune-guy-speech-bubble" id="70k-x4-Or9">
                             <connections>
@@ -48,7 +48,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="484" y="346"/>
+            <point key="canvasLocation" x="484" y="344.25"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="BOz-TT-tkC">

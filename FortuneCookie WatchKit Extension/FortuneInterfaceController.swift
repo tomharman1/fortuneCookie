@@ -16,13 +16,22 @@ class FortuneInterfaceController: WKInterfaceController {
     @IBOutlet var fortuneCookieButton: WKInterfaceButton!
 
     let fortunesModel = FortunesModel()
+    let nsDataFacade = NSDataFacade()
     
-    let userDefaults = NSUserDefaults(suiteName:"group.com.tomharman.me.FortuneCookie.userdefaults")
+    var isDancing = true
+    
+    let fortuneLabelHeight = CGFloat(50)
 
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
+        nsDataFacade.reset()
+        
         // Configure interface objects here.
+        self.fortuneCookieButton.setBackgroundImageNamed("fortune")
+        self.fortuneLabel.setHeight(0)
+        self.fortuneLabel.setAlpha(0)
+        self.fortuneCookieButton.setVerticalAlignment(WKInterfaceObjectVerticalAlignment.Center)
     }
 
     override func willActivate() {
@@ -36,9 +45,19 @@ class FortuneInterfaceController: WKInterfaceController {
     }
 
     @IBAction func fortuneCookieBtnTapped() {
+        
+        if (self.isDancing) {
+            self.animateWithDuration(0.5, animations: {
+                self.fortuneLabel.setAlpha(1.0)
+                self.fortuneLabel.setHeight(self.fortuneLabelHeight)
+                self.fortuneCookieButton.setVerticalAlignment(WKInterfaceObjectVerticalAlignment.Bottom)
+            })
+        }
+        
         print("can show fortune: \(self.canShowFortune())")
         if (self.canShowFortune()) {
-            self.saveFortuneLastAccessedDate()
+            nsDataFacade.saveFortuneLastAccessedNow()
+            
             self.fortuneLabel.setText(self.fortunesModel.getFortune())
             self.fortuneCookieButton.setBackgroundImageNamed("fortune-guy-speech-bubble")
         }
@@ -48,19 +67,14 @@ class FortuneInterfaceController: WKInterfaceController {
         }
     }
     
-    func saveFortuneLastAccessedDate() {
-        let today = NSDate()
-        userDefaults?.setObject(today, forKey: "lastFortuneAccessedDate")
-    }
-    
     func canShowFortune()-> Bool {
-        let fortuneLastAccessedDate = userDefaults?.objectForKey("lastFortuneAccessedDate")
+        let fortuneLastAccessedDate = nsDataFacade.getFortuneLastAccessedDate()
         if (fortuneLastAccessedDate == nil) {
             return true // no previosuly saved date
         }
 
 //        let hoursElapsedSinceLastFortuneAccessed = fortuneLastAccessedDate.timeIntervalSinceNow / (60 * 60)
-        let secondsElapsedSinceLastFortuneAccessed = NSDate().timeIntervalSinceDate(fortuneLastAccessedDate as! NSDate)
+        let secondsElapsedSinceLastFortuneAccessed = NSDate().timeIntervalSinceDate(fortuneLastAccessedDate!)
         
         if (secondsElapsedSinceLastFortuneAccessed > 5) {
             return true
@@ -69,4 +83,14 @@ class FortuneInterfaceController: WKInterfaceController {
             return false
         }
     }
+    
+    override func handleActionWithIdentifier(identifier: String?, forLocalNotification localNotification: UILocalNotification) {
+        print("got an action to handle")
+    }
+    
+    override func handleActionWithIdentifier(identifier: String?, forRemoteNotification remoteNotification: [NSObject : AnyObject]) {
+        print("got an action to handle")
+    }
+    
+
 }

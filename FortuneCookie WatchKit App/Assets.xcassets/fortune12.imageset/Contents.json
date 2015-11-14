@@ -1,0 +1,25 @@
+{
+  "images" : [
+    {
+      "idiom" : "watch",
+      "filename" : "fortune12.png",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "watch",
+      "filename" : "fortune12-1.png",
+      "screen-width" : "<=145",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "watch",
+      "filename" : "fortune12-2.png",
+      "screen-width" : ">145",
+      "scale" : "2x"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}

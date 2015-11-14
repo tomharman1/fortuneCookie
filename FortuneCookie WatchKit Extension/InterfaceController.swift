@@ -19,7 +19,7 @@ class InterfaceController: WKInterfaceController {
     var count = 0
     
     let fortunesModel = FortunesModel()
-    
+
     var hapticTypes = [
         WKHapticType.Notification,
         WKHapticType.DirectionUp,

@@ -10,6 +10,10 @@ import WatchKit
 
 class FortunesModel {
     
+    let nsDataFacade = NSDataFacade()
+    
+    let maxLengthFortuneSupported = 115
+    
     var currentFortuneIndex = -1
     
     let fortunes: [String] = ["Your shoes will make you happy today.",
@@ -20,16 +24,30 @@ class FortunesModel {
         "Be on the lookout for coming events; They cast their shadows beforehand."]
     
     func getFortune() -> String {
-        var foundNewFortune = false
-        let i = (random() % fortunes.count)
-        
-        while(!foundNewFortune) { // make sure it's unique
-            if (i != currentFortuneIndex) {
+        while(isHaveAFortuneToShow()) {
+            let i = (random() % fortunes.count)
+            let fortune = self.fortunes[i]
+            if (isValidFortune(i)) {
+                nsDataFacade.sawFortuneWithIndex(i)
                 currentFortuneIndex = i
-                foundNewFortune = true
+                return fortune
+            }
+            else {
+                print("couldn't find a fortune on this attempt! (length: \(fortune.characters.count))")
             }
         }
         
-        return self.fortunes[currentFortuneIndex]
+        return "You ran out of Fortunes!"
+    }
+    
+    private func isHaveAFortuneToShow() -> Bool {
+        return nsDataFacade.seenFortunesCount() < fortunes.count
+    }
+    
+    private func isValidFortune(i: Int) -> Bool {
+        let fortuneLength = self.fortunes[i].characters.count
+        return (i != currentFortuneIndex) &&
+                (fortuneLength < maxLengthFortuneSupported) &&
+                    !nsDataFacade.isHaveAlreadySeenFortuneWithIndex(i)
     }
 }

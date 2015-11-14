@@ -25,6 +25,7 @@
 		F8AF8A511BA5E5CD00FB0BAB /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AF8A501BA5E5CD00FB0BAB /* GlanceController.swift */; };
 		F8AF8A531BA5E5CD00FB0BAB /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AF8A521BA5E5CD00FB0BAB /* ComplicationController.swift */; };
 		F8DA7EA81BA62E5100A07409 /* FortunesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DA7EA71BA62E5100A07409 /* FortunesModel.swift */; };
+		F8F6487D1BF6B3C000632A25 /* NSDataFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F6487C1BF6B3C000632A25 /* NSDataFacade.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +113,7 @@
 		F8AF8A521BA5E5CD00FB0BAB /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		F8AF8A561BA5E5CD00FB0BAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8DA7EA71BA62E5100A07409 /* FortunesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FortunesModel.swift; sourceTree = "<group>"; };
+		F8F6487C1BF6B3C000632A25 /* NSDataFacade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDataFacade.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +226,7 @@
 				F8AF8A481BA5E5CD00FB0BAB /* Supporting Files */,
 				F8DA7EA71BA62E5100A07409 /* FortunesModel.swift */,
 				F844394C1BDF38890000A2A2 /* FortuneInterfaceController.swift */,
+				F8F6487C1BF6B3C000632A25 /* NSDataFacade.swift */,
 			);
 			path = "FortuneCookie WatchKit Extension";
 			sourceTree = "<group>";
@@ -461,6 +464,7 @@
 				F844394D1BDF38890000A2A2 /* FortuneInterfaceController.swift in Sources */,
 				F8DA7EA81BA62E5100A07409 /* FortunesModel.swift in Sources */,
 				F8AF8A4D1BA5E5CD00FB0BAB /* ExtensionDelegate.swift in Sources */,
+				F8F6487D1BF6B3C000632A25 /* NSDataFacade.swift in Sources */,
 				F8AF8A531BA5E5CD00FB0BAB /* ComplicationController.swift in Sources */,
 				F8AF8A4B1BA5E5CD00FB0BAB /* InterfaceController.swift in Sources */,
 				F8AF8A511BA5E5CD00FB0BAB /* GlanceController.swift in Sources */,
