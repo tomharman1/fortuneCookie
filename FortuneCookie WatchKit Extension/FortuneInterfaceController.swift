@@ -68,6 +68,8 @@ class FortuneInterfaceController: WKInterfaceController {
     }
     
     func canShowFortune()-> Bool {
+        return true
+        
         let fortuneLastAccessedDate = nsDataFacade.getFortuneLastAccessedDate()
         if (fortuneLastAccessedDate == nil) {
             return true // no previosuly saved date
