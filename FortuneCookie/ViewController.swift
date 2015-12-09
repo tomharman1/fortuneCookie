@@ -13,11 +13,18 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let dateComponent = NSDateComponents()
+        dateComponent.hour = 12
+        dateComponent.minute = 30
+        let lunchTime = NSCalendar.currentCalendar().dateFromComponents(dateComponent)
+        
         let firstLocalNotification = UILocalNotification()
 //        firstLocalNotification.alertAction = "testing notifications"
-        firstLocalNotification.alertBody = "Your Fortune Cookie is here!"
-        firstLocalNotification.category = "INVITATION_CATEGORY"
-        firstLocalNotification.fireDate = NSDate(timeIntervalSinceNow: 10)
+        firstLocalNotification.alertBody = "Your Fortune is here!"
+        firstLocalNotification.category = "NEW_COOKIE_CATEGORY"
+        firstLocalNotification.repeatInterval = NSCalendarUnit.Day
+        firstLocalNotification.fireDate = lunchTime
+        UIApplication.sharedApplication().cancelAllLocalNotifications()
         UIApplication.sharedApplication().scheduleLocalNotification(firstLocalNotification)
     }
 

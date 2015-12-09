@@ -27,15 +27,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var categories = Set<UIUserNotificationCategory>()
         
         let acceptAction = UIMutableUserNotificationAction()
-        acceptAction.title = NSLocalizedString("Accept", comment: "Accept Invitation")
-        acceptAction.identifier = "accept"
+        acceptAction.title = NSLocalizedString("Open", comment: "Open Cookie")
+        acceptAction.identifier = "open"
         acceptAction.activationMode = UIUserNotificationActivationMode.Foreground
         acceptAction.authenticationRequired = false
   
         let category = UIMutableUserNotificationCategory()
         category.setActions([acceptAction], forContext: UIUserNotificationActionContext.Default)
         category.setActions([acceptAction], forContext: UIUserNotificationActionContext.Minimal)
-        category.identifier = "INVITATION_CATEGORY"
+        category.identifier = "NEW_COOKIE_CATEGORY"
         categories.insert(category)
         
 //        (UIUserNotificationType.Alert | UIUserNotificationType.Badge | UIUserNotificationType.Sound)
