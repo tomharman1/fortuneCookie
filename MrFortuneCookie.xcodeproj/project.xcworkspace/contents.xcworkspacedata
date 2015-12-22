@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:FortuneCookie.xcodeproj">
+      location = "self:/Users/tharman/dev/git/fortune-cookie/FortuneCookie/MrFortuneCookie.xcodeproj">
    </FileRef>
 </Workspace>

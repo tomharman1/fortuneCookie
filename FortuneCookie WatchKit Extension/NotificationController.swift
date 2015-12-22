@@ -35,7 +35,6 @@ class NotificationController: WKUserNotificationInterfaceController {
 //         Populate your dynamic notification interface as quickly as possible.
         
 //         After populating your dynamic notification interface call the completion block.
-        print("got a local notification")
         completionHandler(.Custom)
     }
     
@@ -45,7 +44,6 @@ class NotificationController: WKUserNotificationInterfaceController {
         // Populate your dynamic notification interface as quickly as possible.
         //
         // After populating your dynamic notification interface call the completion block.
-        print("got a remote notification")
         completionHandler(.Custom)
     }
 

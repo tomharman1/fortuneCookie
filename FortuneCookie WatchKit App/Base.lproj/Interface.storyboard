@@ -1,36 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="B8O-bd-VEr">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="B8O-bd-VEr">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9019"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9515"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
-        <scene sceneID="aou-V4-d1y">
-            <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="FortuneCookie_WatchKit_App" customModuleProvider="target">
-                    <items>
-                        <label alignment="center" text="&lt;Fortune Text&gt;" textAlignment="justified" numberOfLines="4" minimumScaleFactor="0.69999999999999996" id="wP8-Z8-frg">
-                            <fontDescription key="font" type="system" pointSize="13"/>
-                        </label>
-                        <button width="1" alignment="left" verticalAlignment="bottom" title="Haptic Test" id="buv-JA-UO4">
-                            <connections>
-                                <action selector="hapticTestBtnPressed" destination="AgC-eL-Hgc" id="QTk-TP-B8Y"/>
-                            </connections>
-                        </button>
-                    </items>
-                    <connections>
-                        <outlet property="hapticTestBtn" destination="buv-JA-UO4" id="ceu-br-xuO"/>
-                        <outlet property="label" destination="wP8-Z8-frg" id="aTJ-eC-dub"/>
-                    </connections>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="235" y="347"/>
-        </scene>
         <!--Fortune Interface Controller-->
         <scene sceneID="QKR-k2-g4U">
             <objects>
-                <controller id="B8O-bd-VEr" customClass="FortuneInterfaceController" customModule="FortuneCookie_WatchKit_Extension">
+                <controller id="B8O-bd-VEr" customClass="FortuneInterfaceController" customModule="MrFortuneCookie">
                     <items>
                         <label width="1" height="51" alignment="center" verticalAlignment="center" text="What ever you're goal is in life, embrace it visualize it, and for it will be yours. One more line One more line One" textAlignment="center" numberOfLines="4" minimumScaleFactor="0.69999999999999996" id="Phm-il-Rwd">
                             <fontDescription key="font" type="system" pointSize="12"/>
@@ -48,12 +26,12 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="484" y="344.25"/>
+            <point key="canvasLocation" x="235" y="208.25"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="BOz-TT-tkC">
             <objects>
-                <glanceController spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController" customModule="FortuneCookie_WatchKit_App" customModuleProvider="target">
+                <glanceController spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController" customModule="MrFortuneCookie" customModuleProvider="target">
                     <items>
                         <group alignment="left" id="t8f-Gd-c4y"/>
                         <group alignment="left" id="uCw-4Q-Ouw">
@@ -65,7 +43,7 @@
                     <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
                 </glanceController>
             </objects>
-            <point key="canvasLocation" x="235" y="672"/>
+            <point key="canvasLocation" x="235" y="449"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -81,14 +59,14 @@
                     </connections>
                 </notificationController>
             </objects>
-            <point key="canvasLocation" x="235" y="1001"/>
+            <point key="canvasLocation" x="235" y="694"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="KIl-fV-djm">
             <objects>
-                <controller id="gdX-wl-uQE" customClass="NotificationController" customModule="FortuneCookie_WatchKit_App" customModuleProvider="target"/>
+                <controller id="gdX-wl-uQE" customClass="NotificationController" customModule="MrFortuneCookie" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="553" y="1001"/>
+            <point key="canvasLocation" x="446" y="694"/>
         </scene>
     </scenes>
 </document>

@@ -12,19 +12,6 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
 
     func applicationDidFinishLaunching() {
         // Perform any final initialization of your application.
-        
-//        let appDelegate = UIApplication.sharedApplication.delegate as! AppDelegate
-//        let moc = appDelegate.managedObjectContext!
-//        
-//        let fetchRequest = NSFetchRequest(entityName: "Entity")
-//        
-//        var error: NSError?
-//        if let fetchedResults = moc.executeFetchRequest(fetchRequest, error: &error) as! [Assignment]? {
-//            assignments = fetchedResults
-//        }
-//        else {
-//            println("could not retrieve any results")
-//        }
     }
 
     func applicationDidBecomeActive() {

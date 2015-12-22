@@ -15,11 +15,10 @@
 		F8AF8A1A1BA5E5CC00FB0BAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8AF8A181BA5E5CC00FB0BAB /* LaunchScreen.storyboard */; };
 		F8AF8A251BA5E5CC00FB0BAB /* FortuneCookieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AF8A241BA5E5CC00FB0BAB /* FortuneCookieTests.swift */; };
 		F8AF8A301BA5E5CC00FB0BAB /* FortuneCookieUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AF8A2F1BA5E5CC00FB0BAB /* FortuneCookieUITests.swift */; };
-		F8AF8A351BA5E5CC00FB0BAB /* FortuneCookie WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F8AF8A341BA5E5CC00FB0BAB /* FortuneCookie WatchKit App.app */; };
+		F8AF8A351BA5E5CC00FB0BAB /* MrFortuneCookie.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F8AF8A341BA5E5CC00FB0BAB /* MrFortuneCookie.app */; };
 		F8AF8A3B1BA5E5CD00FB0BAB /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8AF8A391BA5E5CD00FB0BAB /* Interface.storyboard */; };
 		F8AF8A3D1BA5E5CD00FB0BAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8AF8A3C1BA5E5CD00FB0BAB /* Assets.xcassets */; };
-		F8AF8A441BA5E5CD00FB0BAB /* FortuneCookie WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F8AF8A431BA5E5CD00FB0BAB /* FortuneCookie WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		F8AF8A4B1BA5E5CD00FB0BAB /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AF8A4A1BA5E5CD00FB0BAB /* InterfaceController.swift */; };
+		F8AF8A441BA5E5CD00FB0BAB /* MrFortuneCookie.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F8AF8A431BA5E5CD00FB0BAB /* MrFortuneCookie.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F8AF8A4D1BA5E5CD00FB0BAB /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AF8A4C1BA5E5CD00FB0BAB /* ExtensionDelegate.swift */; };
 		F8AF8A4F1BA5E5CD00FB0BAB /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AF8A4E1BA5E5CD00FB0BAB /* NotificationController.swift */; };
 		F8AF8A511BA5E5CD00FB0BAB /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AF8A501BA5E5CD00FB0BAB /* GlanceController.swift */; };
@@ -66,7 +65,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				F8AF8A441BA5E5CD00FB0BAB /* FortuneCookie WatchKit Extension.appex in Embed App Extensions */,
+				F8AF8A441BA5E5CD00FB0BAB /* MrFortuneCookie.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -77,7 +76,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				F8AF8A351BA5E5CC00FB0BAB /* FortuneCookie WatchKit App.app in Embed Watch Content */,
+				F8AF8A351BA5E5CC00FB0BAB /* MrFortuneCookie.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -87,26 +86,25 @@
 /* Begin PBXFileReference section */
 		F844394C1BDF38890000A2A2 /* FortuneInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FortuneInterfaceController.swift; sourceTree = "<group>"; };
 		F86929431BE6DD1400F5A221 /* FortuneCookie.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = FortuneCookie.entitlements; sourceTree = "<group>"; };
-		F8AF8A0C1BA5E5CC00FB0BAB /* FortuneCookie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FortuneCookie.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8AF8A0C1BA5E5CC00FB0BAB /* MrFortuneCookie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MrFortuneCookie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8AF8A0F1BA5E5CC00FB0BAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8AF8A111BA5E5CC00FB0BAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F8AF8A141BA5E5CC00FB0BAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F8AF8A161BA5E5CC00FB0BAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8AF8A191BA5E5CC00FB0BAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F8AF8A1B1BA5E5CC00FB0BAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F8AF8A201BA5E5CC00FB0BAB /* FortuneCookieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FortuneCookieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8AF8A201BA5E5CC00FB0BAB /* MrFortuneCookie.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MrFortuneCookie.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8AF8A241BA5E5CC00FB0BAB /* FortuneCookieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FortuneCookieTests.swift; sourceTree = "<group>"; };
 		F8AF8A261BA5E5CC00FB0BAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F8AF8A2B1BA5E5CC00FB0BAB /* FortuneCookieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FortuneCookieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8AF8A2B1BA5E5CC00FB0BAB /* MrFortuneCookie.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MrFortuneCookie.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8AF8A2F1BA5E5CC00FB0BAB /* FortuneCookieUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FortuneCookieUITests.swift; sourceTree = "<group>"; };
 		F8AF8A311BA5E5CC00FB0BAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F8AF8A341BA5E5CC00FB0BAB /* FortuneCookie WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FortuneCookie WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8AF8A341BA5E5CC00FB0BAB /* MrFortuneCookie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MrFortuneCookie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8AF8A3A1BA5E5CD00FB0BAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		F8AF8A3C1BA5E5CD00FB0BAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8AF8A3E1BA5E5CD00FB0BAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F8AF8A431BA5E5CD00FB0BAB /* FortuneCookie WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "FortuneCookie WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8AF8A431BA5E5CD00FB0BAB /* MrFortuneCookie.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MrFortuneCookie.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8AF8A491BA5E5CD00FB0BAB /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
-		F8AF8A4A1BA5E5CD00FB0BAB /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
 		F8AF8A4C1BA5E5CD00FB0BAB /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		F8AF8A4E1BA5E5CD00FB0BAB /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		F8AF8A501BA5E5CD00FB0BAB /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
@@ -163,11 +161,11 @@
 		F8AF8A0D1BA5E5CC00FB0BAB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F8AF8A0C1BA5E5CC00FB0BAB /* FortuneCookie.app */,
-				F8AF8A201BA5E5CC00FB0BAB /* FortuneCookieTests.xctest */,
-				F8AF8A2B1BA5E5CC00FB0BAB /* FortuneCookieUITests.xctest */,
-				F8AF8A341BA5E5CC00FB0BAB /* FortuneCookie WatchKit App.app */,
-				F8AF8A431BA5E5CD00FB0BAB /* FortuneCookie WatchKit Extension.appex */,
+				F8AF8A0C1BA5E5CC00FB0BAB /* MrFortuneCookie.app */,
+				F8AF8A201BA5E5CC00FB0BAB /* MrFortuneCookie.xctest */,
+				F8AF8A2B1BA5E5CC00FB0BAB /* MrFortuneCookie.xctest */,
+				F8AF8A341BA5E5CC00FB0BAB /* MrFortuneCookie.app */,
+				F8AF8A431BA5E5CD00FB0BAB /* MrFortuneCookie.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -217,7 +215,6 @@
 		F8AF8A471BA5E5CD00FB0BAB /* FortuneCookie WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				F8AF8A4A1BA5E5CD00FB0BAB /* InterfaceController.swift */,
 				F8AF8A4C1BA5E5CD00FB0BAB /* ExtensionDelegate.swift */,
 				F8AF8A4E1BA5E5CD00FB0BAB /* NotificationController.swift */,
 				F8AF8A501BA5E5CD00FB0BAB /* GlanceController.swift */,
@@ -242,9 +239,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F8AF8A0B1BA5E5CC00FB0BAB /* FortuneCookie */ = {
+		F8AF8A0B1BA5E5CC00FB0BAB /* MrFortuneCookie */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F8AF8A611BA5E5CD00FB0BAB /* Build configuration list for PBXNativeTarget "FortuneCookie" */;
+			buildConfigurationList = F8AF8A611BA5E5CD00FB0BAB /* Build configuration list for PBXNativeTarget "MrFortuneCookie" */;
 			buildPhases = (
 				F8AF8A081BA5E5CC00FB0BAB /* Sources */,
 				F8AF8A091BA5E5CC00FB0BAB /* Frameworks */,
@@ -256,14 +253,14 @@
 			dependencies = (
 				F8AF8A371BA5E5CC00FB0BAB /* PBXTargetDependency */,
 			);
-			name = FortuneCookie;
+			name = MrFortuneCookie;
 			productName = FortuneCookie;
-			productReference = F8AF8A0C1BA5E5CC00FB0BAB /* FortuneCookie.app */;
+			productReference = F8AF8A0C1BA5E5CC00FB0BAB /* MrFortuneCookie.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F8AF8A1F1BA5E5CC00FB0BAB /* FortuneCookieTests */ = {
+		F8AF8A1F1BA5E5CC00FB0BAB /* MrFortuneCookieTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F8AF8A641BA5E5CD00FB0BAB /* Build configuration list for PBXNativeTarget "FortuneCookieTests" */;
+			buildConfigurationList = F8AF8A641BA5E5CD00FB0BAB /* Build configuration list for PBXNativeTarget "MrFortuneCookieTests" */;
 			buildPhases = (
 				F8AF8A1C1BA5E5CC00FB0BAB /* Sources */,
 				F8AF8A1D1BA5E5CC00FB0BAB /* Frameworks */,
@@ -274,14 +271,14 @@
 			dependencies = (
 				F8AF8A221BA5E5CC00FB0BAB /* PBXTargetDependency */,
 			);
-			name = FortuneCookieTests;
+			name = MrFortuneCookieTests;
 			productName = FortuneCookieTests;
-			productReference = F8AF8A201BA5E5CC00FB0BAB /* FortuneCookieTests.xctest */;
+			productReference = F8AF8A201BA5E5CC00FB0BAB /* MrFortuneCookie.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		F8AF8A2A1BA5E5CC00FB0BAB /* FortuneCookieUITests */ = {
+		F8AF8A2A1BA5E5CC00FB0BAB /* MrFortuneCookieUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F8AF8A671BA5E5CD00FB0BAB /* Build configuration list for PBXNativeTarget "FortuneCookieUITests" */;
+			buildConfigurationList = F8AF8A671BA5E5CD00FB0BAB /* Build configuration list for PBXNativeTarget "MrFortuneCookieUITests" */;
 			buildPhases = (
 				F8AF8A271BA5E5CC00FB0BAB /* Sources */,
 				F8AF8A281BA5E5CC00FB0BAB /* Frameworks */,
@@ -292,14 +289,14 @@
 			dependencies = (
 				F8AF8A2D1BA5E5CC00FB0BAB /* PBXTargetDependency */,
 			);
-			name = FortuneCookieUITests;
+			name = MrFortuneCookieUITests;
 			productName = FortuneCookieUITests;
-			productReference = F8AF8A2B1BA5E5CC00FB0BAB /* FortuneCookieUITests.xctest */;
+			productReference = F8AF8A2B1BA5E5CC00FB0BAB /* MrFortuneCookie.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		F8AF8A331BA5E5CC00FB0BAB /* FortuneCookie WatchKit App */ = {
+		F8AF8A331BA5E5CC00FB0BAB /* MrFortuneCookie WatchKit App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F8AF8A5D1BA5E5CD00FB0BAB /* Build configuration list for PBXNativeTarget "FortuneCookie WatchKit App" */;
+			buildConfigurationList = F8AF8A5D1BA5E5CD00FB0BAB /* Build configuration list for PBXNativeTarget "MrFortuneCookie WatchKit App" */;
 			buildPhases = (
 				F8AF8A321BA5E5CC00FB0BAB /* Resources */,
 				F8AF8A5C1BA5E5CD00FB0BAB /* Embed App Extensions */,
@@ -309,14 +306,14 @@
 			dependencies = (
 				F8AF8A461BA5E5CD00FB0BAB /* PBXTargetDependency */,
 			);
-			name = "FortuneCookie WatchKit App";
+			name = "MrFortuneCookie WatchKit App";
 			productName = "FortuneCookie WatchKit App";
-			productReference = F8AF8A341BA5E5CC00FB0BAB /* FortuneCookie WatchKit App.app */;
+			productReference = F8AF8A341BA5E5CC00FB0BAB /* MrFortuneCookie.app */;
 			productType = "com.apple.product-type.application.watchapp2";
 		};
-		F8AF8A421BA5E5CD00FB0BAB /* FortuneCookie WatchKit Extension */ = {
+		F8AF8A421BA5E5CD00FB0BAB /* MrFortuneCookie WatchKit Extension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F8AF8A591BA5E5CD00FB0BAB /* Build configuration list for PBXNativeTarget "FortuneCookie WatchKit Extension" */;
+			buildConfigurationList = F8AF8A591BA5E5CD00FB0BAB /* Build configuration list for PBXNativeTarget "MrFortuneCookie WatchKit Extension" */;
 			buildPhases = (
 				F8AF8A3F1BA5E5CD00FB0BAB /* Sources */,
 				F8AF8A401BA5E5CD00FB0BAB /* Frameworks */,
@@ -326,9 +323,9 @@
 			);
 			dependencies = (
 			);
-			name = "FortuneCookie WatchKit Extension";
+			name = "MrFortuneCookie WatchKit Extension";
 			productName = "FortuneCookie WatchKit Extension";
-			productReference = F8AF8A431BA5E5CD00FB0BAB /* FortuneCookie WatchKit Extension.appex */;
+			productReference = F8AF8A431BA5E5CD00FB0BAB /* MrFortuneCookie.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
 		};
 /* End PBXNativeTarget section */
@@ -365,7 +362,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F8AF8A071BA5E5CC00FB0BAB /* Build configuration list for PBXProject "FortuneCookie" */;
+			buildConfigurationList = F8AF8A071BA5E5CC00FB0BAB /* Build configuration list for PBXProject "MrFortuneCookie" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -378,11 +375,11 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F8AF8A0B1BA5E5CC00FB0BAB /* FortuneCookie */,
-				F8AF8A1F1BA5E5CC00FB0BAB /* FortuneCookieTests */,
-				F8AF8A2A1BA5E5CC00FB0BAB /* FortuneCookieUITests */,
-				F8AF8A331BA5E5CC00FB0BAB /* FortuneCookie WatchKit App */,
-				F8AF8A421BA5E5CD00FB0BAB /* FortuneCookie WatchKit Extension */,
+				F8AF8A0B1BA5E5CC00FB0BAB /* MrFortuneCookie */,
+				F8AF8A1F1BA5E5CC00FB0BAB /* MrFortuneCookieTests */,
+				F8AF8A2A1BA5E5CC00FB0BAB /* MrFortuneCookieUITests */,
+				F8AF8A331BA5E5CC00FB0BAB /* MrFortuneCookie WatchKit App */,
+				F8AF8A421BA5E5CD00FB0BAB /* MrFortuneCookie WatchKit Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -466,7 +463,6 @@
 				F8AF8A4D1BA5E5CD00FB0BAB /* ExtensionDelegate.swift in Sources */,
 				F8F6487D1BF6B3C000632A25 /* NSDataFacade.swift in Sources */,
 				F8AF8A531BA5E5CD00FB0BAB /* ComplicationController.swift in Sources */,
-				F8AF8A4B1BA5E5CD00FB0BAB /* InterfaceController.swift in Sources */,
 				F8AF8A511BA5E5CD00FB0BAB /* GlanceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -476,22 +472,22 @@
 /* Begin PBXTargetDependency section */
 		F8AF8A221BA5E5CC00FB0BAB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F8AF8A0B1BA5E5CC00FB0BAB /* FortuneCookie */;
+			target = F8AF8A0B1BA5E5CC00FB0BAB /* MrFortuneCookie */;
 			targetProxy = F8AF8A211BA5E5CC00FB0BAB /* PBXContainerItemProxy */;
 		};
 		F8AF8A2D1BA5E5CC00FB0BAB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F8AF8A0B1BA5E5CC00FB0BAB /* FortuneCookie */;
+			target = F8AF8A0B1BA5E5CC00FB0BAB /* MrFortuneCookie */;
 			targetProxy = F8AF8A2C1BA5E5CC00FB0BAB /* PBXContainerItemProxy */;
 		};
 		F8AF8A371BA5E5CC00FB0BAB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F8AF8A331BA5E5CC00FB0BAB /* FortuneCookie WatchKit App */;
+			target = F8AF8A331BA5E5CC00FB0BAB /* MrFortuneCookie WatchKit App */;
 			targetProxy = F8AF8A361BA5E5CC00FB0BAB /* PBXContainerItemProxy */;
 		};
 		F8AF8A461BA5E5CD00FB0BAB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F8AF8A421BA5E5CD00FB0BAB /* FortuneCookie WatchKit Extension */;
+			target = F8AF8A421BA5E5CD00FB0BAB /* MrFortuneCookie WatchKit Extension */;
 			targetProxy = F8AF8A451BA5E5CD00FB0BAB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -611,8 +607,8 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				INFOPLIST_FILE = "FortuneCookie WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tomharman.me.FortuneCookie.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tomharman.me.MrFortuneCookie.watchkitapp.watchkitextension;
+				PRODUCT_NAME = MrFortuneCookie;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -626,8 +622,8 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				INFOPLIST_FILE = "FortuneCookie WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tomharman.me.FortuneCookie.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tomharman.me.MrFortuneCookie.watchkitapp.watchkitextension;
+				PRODUCT_NAME = MrFortuneCookie;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -639,11 +635,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = FortuneCookie_WatchKit_Extension;
 				INFOPLIST_FILE = "FortuneCookie WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tomharman.me.FortuneCookie.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tomharman.me.MrFortuneCookie.watchkitapp;
+				PRODUCT_NAME = MrFortuneCookie;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -655,11 +652,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = FortuneCookie_WatchKit_Extension;
 				INFOPLIST_FILE = "FortuneCookie WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tomharman.me.FortuneCookie.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tomharman.me.MrFortuneCookie.watchkitapp;
+				PRODUCT_NAME = MrFortuneCookie;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -673,12 +671,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = FortuneCookie/FortuneCookie.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FortuneCookie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tomharman.me.FortuneCookie;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "ec4d8240-3d89-476a-bb85-e40ad0218ea2";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tomharman.me.MrFortuneCookie;
+				PRODUCT_NAME = MrFortuneCookie;
+				PROVISIONING_PROFILE = "";
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
@@ -689,12 +687,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = FortuneCookie/FortuneCookie.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Thomas Harman (5YFM8BW7RJ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FortuneCookie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tomharman.me.FortuneCookie;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "ec4d8240-3d89-476a-bb85-e40ad0218ea2";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tomharman.me.MrFortuneCookie;
+				PRODUCT_NAME = MrFortuneCookie;
+				PROVISIONING_PROFILE = "";
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
@@ -706,8 +704,8 @@
 				INFOPLIST_FILE = FortuneCookieTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tomharman.me.FortuneCookieTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FortuneCookie.app/FortuneCookie";
+				PRODUCT_NAME = MrFortuneCookie;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MrFortuneCookie.app/MrFortuneCookie";
 			};
 			name = Debug;
 		};
@@ -718,8 +716,8 @@
 				INFOPLIST_FILE = FortuneCookieTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tomharman.me.FortuneCookieTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FortuneCookie.app/FortuneCookie";
+				PRODUCT_NAME = MrFortuneCookie;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MrFortuneCookie.app/MrFortuneCookie";
 			};
 			name = Release;
 		};
@@ -729,7 +727,7 @@
 				INFOPLIST_FILE = FortuneCookieUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tomharman.me.FortuneCookieUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MrFortuneCookie;
 				TEST_TARGET_NAME = FortuneCookie;
 				USES_XCTRUNNER = YES;
 			};
@@ -741,7 +739,7 @@
 				INFOPLIST_FILE = FortuneCookieUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tomharman.me.FortuneCookieUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MrFortuneCookie;
 				TEST_TARGET_NAME = FortuneCookie;
 				USES_XCTRUNNER = YES;
 			};
@@ -750,7 +748,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F8AF8A071BA5E5CC00FB0BAB /* Build configuration list for PBXProject "FortuneCookie" */ = {
+		F8AF8A071BA5E5CC00FB0BAB /* Build configuration list for PBXProject "MrFortuneCookie" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F8AF8A571BA5E5CD00FB0BAB /* Debug */,
@@ -759,7 +757,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F8AF8A591BA5E5CD00FB0BAB /* Build configuration list for PBXNativeTarget "FortuneCookie WatchKit Extension" */ = {
+		F8AF8A591BA5E5CD00FB0BAB /* Build configuration list for PBXNativeTarget "MrFortuneCookie WatchKit Extension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F8AF8A5A1BA5E5CD00FB0BAB /* Debug */,
@@ -768,7 +766,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F8AF8A5D1BA5E5CD00FB0BAB /* Build configuration list for PBXNativeTarget "FortuneCookie WatchKit App" */ = {
+		F8AF8A5D1BA5E5CD00FB0BAB /* Build configuration list for PBXNativeTarget "MrFortuneCookie WatchKit App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F8AF8A5E1BA5E5CD00FB0BAB /* Debug */,
@@ -777,7 +775,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F8AF8A611BA5E5CD00FB0BAB /* Build configuration list for PBXNativeTarget "FortuneCookie" */ = {
+		F8AF8A611BA5E5CD00FB0BAB /* Build configuration list for PBXNativeTarget "MrFortuneCookie" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F8AF8A621BA5E5CD00FB0BAB /* Debug */,
@@ -786,7 +784,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F8AF8A641BA5E5CD00FB0BAB /* Build configuration list for PBXNativeTarget "FortuneCookieTests" */ = {
+		F8AF8A641BA5E5CD00FB0BAB /* Build configuration list for PBXNativeTarget "MrFortuneCookieTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F8AF8A651BA5E5CD00FB0BAB /* Debug */,
@@ -795,7 +793,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F8AF8A671BA5E5CD00FB0BAB /* Build configuration list for PBXNativeTarget "FortuneCookieUITests" */ = {
+		F8AF8A671BA5E5CD00FB0BAB /* Build configuration list for PBXNativeTarget "MrFortuneCookieUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F8AF8A681BA5E5CD00FB0BAB /* Debug */,

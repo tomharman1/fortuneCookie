@@ -11,7 +11,9 @@ import Foundation
 
 class FortuneInterfaceController: WKInterfaceController {
     
-    let RAN_OUT_OF_FORTUNES_MSG = "You ran out of Fortunes!"
+    let RAN_OUT_OF_FORTUNES_STR = "You ran out of Fortunes!"
+    let YOU_ARE_GREEDY_STR = "Wow, you're greedy!\n Come back tomorrow for your next fortune"
+    
     let HAPTIC_TYPES = [
         WKHapticType.Notification,
         WKHapticType.DirectionUp,
@@ -36,15 +38,17 @@ class FortuneInterfaceController: WKInterfaceController {
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
-        nsDataFacade.reset() // TODO: remove before shipping
-        
-        showDancingFortune()
-        showFortune(true)
+//        TODO: remove before shipping
+//        nsDataFacade.reset()
     }
 
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        if (self.canShowFortune()) {
+            showDancingFortune()
+            showFortune(true)
+        }
     }
 
     override func didDeactivate() {
@@ -56,19 +60,10 @@ class FortuneInterfaceController: WKInterfaceController {
         showFortune(false)
     }
     
-    override func handleActionWithIdentifier(identifier: String?, forLocalNotification localNotification: UILocalNotification) {
-        print("got a local notification to handle")
-        
-        // TODO: This doesn't get called when opening local notification. Find out how to make fortune dance when opening via notification
-        
-//        showDancingFortune()
-//        showFortune(true)
-//        print("identifier was: \(identifier)")
-    }
-    
-    override func handleActionWithIdentifier(identifier: String?, forRemoteNotification remoteNotification: [NSObject : AnyObject]) {
-        print("got an action to handle")
-    }
+//    override func handleActionWithIdentifier(identifier: String?, forLocalNotification localNotification: UILocalNotification) {
+//    }
+//    override func handleActionWithIdentifier(identifier: String?, forRemoteNotification remoteNotification: [NSObject : AnyObject]) {
+//    }
     
     private func showFortune(isShowDelayed: Bool) {
         if (isFortuneQueuedToShow) {
@@ -76,7 +71,7 @@ class FortuneInterfaceController: WKInterfaceController {
         }
         
         let delaySeconds = isShowDelayed ? 4.0 : 0.0
-        let delay = delaySeconds * Double(NSEC_PER_SEC) // nanoseconds per seconds
+        let delay = delaySeconds * Double(NSEC_PER_SEC)
         let dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
         
         isFortuneQueuedToShow = true
@@ -85,8 +80,9 @@ class FortuneInterfaceController: WKInterfaceController {
             
             print("can show fortune: \(self.canShowFortune())")
             if (self.canShowFortune()) {
-                let fortune = self.fortunesModel.getFortune() ?? self.RAN_OUT_OF_FORTUNES_MSG
-                let hapticType = fortune == self.RAN_OUT_OF_FORTUNES_MSG ? self.HAPTIC_TYPES[4] : self.HAPTIC_TYPES[2]
+                let fortune = self.fortunesModel.getFortune() ?? self.RAN_OUT_OF_FORTUNES_STR
+//                let fortune = "Open me on your watch. iPhone app coming soon..."
+                let hapticType = fortune == self.RAN_OUT_OF_FORTUNES_STR ? self.HAPTIC_TYPES[4] : self.HAPTIC_TYPES[2]
                 self.nsDataFacade.saveFortuneLastAccessedNow() // TODO: perhaps this should be in the model. Not the view controller
                 self.playHaptic(hapticType)
                 self.fortuneLabel.setText(fortune)
@@ -94,7 +90,7 @@ class FortuneInterfaceController: WKInterfaceController {
             }
             else {
                 self.playHaptic(self.HAPTIC_TYPES[4])
-                self.fortuneLabel.setText("Wow, you're greedy!\n Come back tomorrow for your next fortune")
+                self.fortuneLabel.setText(self.YOU_ARE_GREEDY_STR)
                 self.fortuneCookieButton.setBackgroundImageNamed("fortune-guy-greedy")
             }
             
@@ -127,15 +123,13 @@ class FortuneInterfaceController: WKInterfaceController {
     }
     
     private func canShowFortune()-> Bool {
-        //        return true
         let fortuneLastAccessedDate = nsDataFacade.getFortuneLastAccessedDate()
         if (fortuneLastAccessedDate == nil) {
             return true // no previosuly saved date
         }
         
         let hoursElapsedSinceLastFortuneAccessed = NSDate().timeIntervalSinceDate(fortuneLastAccessedDate!) / (60 * 60)
-        //        let secondsElapsedSinceLastFortuneAccessed = NSDate().timeIntervalSinceDate(fortuneLastAccessedDate!)
-        if (hoursElapsedSinceLastFortuneAccessed > -1) {
+        if (hoursElapsedSinceLastFortuneAccessed > 12) {
             return true
         }
         else {

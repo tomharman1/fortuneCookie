@@ -19,7 +19,6 @@ class ViewController: UIViewController {
         let lunchTime = NSCalendar.currentCalendar().dateFromComponents(dateComponent)
         
         let firstLocalNotification = UILocalNotification()
-//        firstLocalNotification.alertAction = "testing notifications"
         firstLocalNotification.alertBody = "Your Fortune is here!"
         firstLocalNotification.category = "NEW_COOKIE_CATEGORY"
         firstLocalNotification.repeatInterval = NSCalendarUnit.Day

@@ -38,7 +38,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         category.identifier = "NEW_COOKIE_CATEGORY"
         categories.insert(category)
         
-//        (UIUserNotificationType.Alert | UIUserNotificationType.Badge | UIUserNotificationType.Sound)
         let settings = UIUserNotificationSettings(forTypes: UIUserNotificationType.Alert, categories: categories)
         
         UIApplication.sharedApplication().registerUserNotificationSettings(settings)
