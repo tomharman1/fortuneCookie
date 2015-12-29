@@ -29,6 +29,11 @@ class NSDataFacade: NSObject {
         return (userDefaults?.objectForKey(LAST_FORTUNE_ACCESSED_DATE_KEY)) as? NSDate
     }
     
+    func lastShownFortuneIndex() -> Int {
+        let lastFortuneShownIndex = getSeenFortunesList().count - 1
+        return getSeenFortunesList()[lastFortuneShownIndex] as! Int
+    }
+
     func seenFortunesCount() -> Int {
         return getSeenFortunesList().count
     }

@@ -11,20 +11,9 @@ import Foundation
 
 class FortuneInterfaceController: WKInterfaceController {
     
-    let RAN_OUT_OF_FORTUNES_STR = "You ran out of Fortunes!"
-    let YOU_ARE_GREEDY_STR = "Wow, you're greedy!\n Come back tomorrow for your next fortune"
-    
-    let HAPTIC_TYPES = [
-        WKHapticType.Notification,
-        WKHapticType.DirectionUp,
-        WKHapticType.DirectionDown, // show fortune
-        WKHapticType.Success,
-        WKHapticType.Failure, // no fortunes
-        WKHapticType.Retry,
-        WKHapticType.Start,
-        WKHapticType.Stop,
-        WKHapticType.Click,
-    ]
+    let YOU_ARE_GREEDY_STR = "Wow, you're greedy!\n Come back tomorrow for a New fortune"
+    let RAN_OUT_OF_FORTUNES_HAPTIC = WKHapticType.Failure
+    let NEW_FORTUNE_HAPTIC = WKHapticType.DirectionDown
     
     @IBOutlet var fortuneLabel: WKInterfaceLabel!
     @IBOutlet var fortuneCookieButton: WKInterfaceButton!
@@ -49,6 +38,9 @@ class FortuneInterfaceController: WKInterfaceController {
             showDancingFortune()
             showFortune(true)
         }
+        else {
+            showLastFortune()
+        }
     }
 
     override func didDeactivate() {
@@ -59,11 +51,6 @@ class FortuneInterfaceController: WKInterfaceController {
     @IBAction func fortuneCookieBtnTapped() {
         showFortune(false)
     }
-    
-//    override func handleActionWithIdentifier(identifier: String?, forLocalNotification localNotification: UILocalNotification) {
-//    }
-//    override func handleActionWithIdentifier(identifier: String?, forRemoteNotification remoteNotification: [NSObject : AnyObject]) {
-//    }
     
     private func showFortune(isShowDelayed: Bool) {
         if (isFortuneQueuedToShow) {
@@ -80,16 +67,16 @@ class FortuneInterfaceController: WKInterfaceController {
             
             print("can show fortune: \(self.canShowFortune())")
             if (self.canShowFortune()) {
-                let fortune = self.fortunesModel.getFortune() ?? self.RAN_OUT_OF_FORTUNES_STR
+                let fortune = self.fortunesModel.getFortune()
 //                let fortune = "Open me on your watch. iPhone app coming soon..."
-                let hapticType = fortune == self.RAN_OUT_OF_FORTUNES_STR ? self.HAPTIC_TYPES[4] : self.HAPTIC_TYPES[2]
+                let hapticType = (fortune == self.fortunesModel.RAN_OUT_OF_FORTUNES_STR) ? self.RAN_OUT_OF_FORTUNES_HAPTIC : self.NEW_FORTUNE_HAPTIC
                 self.nsDataFacade.saveFortuneLastAccessedNow() // TODO: perhaps this should be in the model. Not the view controller
                 self.playHaptic(hapticType)
                 self.fortuneLabel.setText(fortune)
                 self.fortuneCookieButton.setBackgroundImageNamed("fortune-guy-speech-bubble")
             }
             else {
-                self.playHaptic(self.HAPTIC_TYPES[4])
+                self.playHaptic(self.RAN_OUT_OF_FORTUNES_HAPTIC)
                 self.fortuneLabel.setText(self.YOU_ARE_GREEDY_STR)
                 self.fortuneCookieButton.setBackgroundImageNamed("fortune-guy-greedy")
             }
@@ -97,7 +84,12 @@ class FortuneInterfaceController: WKInterfaceController {
             self.isFortuneQueuedToShow = false
         })
     }
-    
+
+    private func showLastFortune() {
+        self.fortuneLabel.setText(self.fortunesModel.getLastShownFortune())
+        self.fortuneCookieButton.setBackgroundImageNamed("fortune-guy-speech-bubble")
+    }
+
     private func hideDancingFortune() {
         self.animateWithDuration(0.5, animations: {
             self.fortuneLabel.setAlpha(1.0)

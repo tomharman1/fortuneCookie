@@ -9,13 +9,13 @@
 import WatchKit
 
 class FortunesModel {
-    
+
+    let RAN_OUT_OF_FORTUNES_STR = "You ran out of Fortunes!"
+
     let nsDataFacade = NSDataFacade()
-    
     let maxLengthFortuneSupported = 115
-    
     var currentFortuneIndex = -1
-    
+
     func getFortune() -> String? {
         while(isHaveAFortuneToShow()) {
             let i = (random() % fortunes.count)
@@ -29,8 +29,15 @@ class FortunesModel {
                 print("couldn't find a fortune on this attempt! (length: \(fortune.characters.count))")
             }
         }
-        
-        return nil
+        return self.RAN_OUT_OF_FORTUNES_STR
+    }
+
+    func getLastShownFortune() -> String {
+        return getFortuneWithIndex(nsDataFacade.lastShownFortuneIndex())
+    }
+
+    private func getFortuneWithIndex(i: Int) -> String {
+        return fortunes[i]
     }
     
     private func isHaveAFortuneToShow() -> Bool {
