@@ -26,8 +26,6 @@ class FortuneInterfaceController: WKInterfaceController {
 
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
-        
-//        TODO: remove before shipping
 //        nsDataFacade.reset()
     }
 
@@ -66,7 +64,8 @@ class FortuneInterfaceController: WKInterfaceController {
             self.hideDancingFortune()
             
             print("can show fortune: \(self.canShowFortune())")
-            if (self.canShowFortune()) {
+            let canShowFortune = self.canShowFortune() // true
+            if (canShowFortune) {
                 let fortune = self.fortunesModel.getFortune()
 //                let fortune = "Open me on your watch. iPhone app coming soon..."
                 let hapticType = (fortune == self.fortunesModel.RAN_OUT_OF_FORTUNES_STR) ? self.RAN_OUT_OF_FORTUNES_HAPTIC : self.NEW_FORTUNE_HAPTIC
