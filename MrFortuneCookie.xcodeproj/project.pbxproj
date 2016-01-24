@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F82594A91C7D80D000D0DC5F /* FortunesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DA7EA71BA62E5100A07409 /* FortunesModel.swift */; };
+		F82594AA1C7D80F200D0DC5F /* NSDataFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F6487C1BF6B3C000632A25 /* NSDataFacade.swift */; };
 		F844394D1BDF38890000A2A2 /* FortuneInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F844394C1BDF38890000A2A2 /* FortuneInterfaceController.swift */; };
+		F85E397C1CC72EF700B68792 /* SpeechBubbleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85E397B1CC72EF700B68792 /* SpeechBubbleLabel.swift */; };
 		F8AF8A101BA5E5CC00FB0BAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AF8A0F1BA5E5CC00FB0BAB /* AppDelegate.swift */; };
 		F8AF8A121BA5E5CC00FB0BAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AF8A111BA5E5CC00FB0BAB /* ViewController.swift */; };
 		F8AF8A151BA5E5CC00FB0BAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8AF8A131BA5E5CC00FB0BAB /* Main.storyboard */; };
@@ -23,6 +26,9 @@
 		F8AF8A4F1BA5E5CD00FB0BAB /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AF8A4E1BA5E5CD00FB0BAB /* NotificationController.swift */; };
 		F8AF8A511BA5E5CD00FB0BAB /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AF8A501BA5E5CD00FB0BAB /* GlanceController.swift */; };
 		F8DA7EA81BA62E5100A07409 /* FortunesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DA7EA71BA62E5100A07409 /* FortunesModel.swift */; };
+		F8F498261CE01A4200E8583E /* PhoneFortunesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F498251CE01A4200E8583E /* PhoneFortunesModel.swift */; };
+		F8F498281CE81B0700E8583E /* FortuneControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F498271CE81B0700E8583E /* FortuneControllerProtocol.swift */; };
+		F8F498291CE81BBA00E8583E /* FortuneControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F498271CE81B0700E8583E /* FortuneControllerProtocol.swift */; };
 		F8F6487D1BF6B3C000632A25 /* NSDataFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F6487C1BF6B3C000632A25 /* NSDataFacade.swift */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +90,7 @@
 
 /* Begin PBXFileReference section */
 		F844394C1BDF38890000A2A2 /* FortuneInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FortuneInterfaceController.swift; sourceTree = "<group>"; };
+		F85E397B1CC72EF700B68792 /* SpeechBubbleLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechBubbleLabel.swift; sourceTree = "<group>"; };
 		F86929431BE6DD1400F5A221 /* FortuneCookie.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = FortuneCookie.entitlements; sourceTree = "<group>"; };
 		F8AF8A0C1BA5E5CC00FB0BAB /* MrFortuneCookie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MrFortuneCookie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8AF8A0F1BA5E5CC00FB0BAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +116,8 @@
 		F8AF8A501BA5E5CD00FB0BAB /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
 		F8AF8A561BA5E5CD00FB0BAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8DA7EA71BA62E5100A07409 /* FortunesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FortunesModel.swift; sourceTree = "<group>"; };
+		F8F498251CE01A4200E8583E /* PhoneFortunesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneFortunesModel.swift; sourceTree = "<group>"; };
+		F8F498271CE81B0700E8583E /* FortuneControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FortuneControllerProtocol.swift; sourceTree = "<group>"; };
 		F8F6487C1BF6B3C000632A25 /* NSDataFacade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDataFacade.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -178,6 +187,8 @@
 				F8AF8A161BA5E5CC00FB0BAB /* Assets.xcassets */,
 				F8AF8A181BA5E5CC00FB0BAB /* LaunchScreen.storyboard */,
 				F8AF8A1B1BA5E5CC00FB0BAB /* Info.plist */,
+				F85E397B1CC72EF700B68792 /* SpeechBubbleLabel.swift */,
+				F8F498271CE81B0700E8583E /* FortuneControllerProtocol.swift */,
 			);
 			path = FortuneCookie;
 			sourceTree = "<group>";
@@ -221,6 +232,7 @@
 				F8DA7EA71BA62E5100A07409 /* FortunesModel.swift */,
 				F844394C1BDF38890000A2A2 /* FortuneInterfaceController.swift */,
 				F8F6487C1BF6B3C000632A25 /* NSDataFacade.swift */,
+				F8F498251CE01A4200E8583E /* PhoneFortunesModel.swift */,
 			);
 			path = "FortuneCookie WatchKit Extension";
 			sourceTree = "<group>";
@@ -429,7 +441,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F85E397C1CC72EF700B68792 /* SpeechBubbleLabel.swift in Sources */,
+				F82594AA1C7D80F200D0DC5F /* NSDataFacade.swift in Sources */,
+				F8F498261CE01A4200E8583E /* PhoneFortunesModel.swift in Sources */,
+				F8F498281CE81B0700E8583E /* FortuneControllerProtocol.swift in Sources */,
 				F8AF8A121BA5E5CC00FB0BAB /* ViewController.swift in Sources */,
+				F82594A91C7D80D000D0DC5F /* FortunesModel.swift in Sources */,
 				F8AF8A101BA5E5CC00FB0BAB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -457,6 +474,7 @@
 				F8AF8A4F1BA5E5CD00FB0BAB /* NotificationController.swift in Sources */,
 				F844394D1BDF38890000A2A2 /* FortuneInterfaceController.swift in Sources */,
 				F8DA7EA81BA62E5100A07409 /* FortunesModel.swift in Sources */,
+				F8F498291CE81BBA00E8583E /* FortuneControllerProtocol.swift in Sources */,
 				F8AF8A4D1BA5E5CD00FB0BAB /* ExtensionDelegate.swift in Sources */,
 				F8F6487D1BF6B3C000632A25 /* NSDataFacade.swift in Sources */,
 				F8AF8A511BA5E5CD00FB0BAB /* GlanceController.swift in Sources */,

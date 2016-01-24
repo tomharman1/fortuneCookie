@@ -10,20 +10,37 @@ import WatchKit
 import Foundation
 
 
-class GlanceController: WKInterfaceController {
+class GlanceController: WKInterfaceController, FortuneControllerProtocol {
 
     @IBOutlet var label: WKInterfaceLabel!
     
+    private var fortunesModel: FortunesModel?
+
+    override init () {
+        super.init()
+        fortunesModel = FortunesModel(fortuneController: self)
+    }
+
+    func showGreedyMessage(greedyMessage: String) {
+        label.setText(greedyMessage)
+    }
+
+    func showFortune(fortune: String) {
+        label.setText(fortune)
+    }
+
+    func showRanOutOfFortunes(fortune: String){
+        label.setText(fortune)
+    }
+
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
-        
-        // Configure interface objects here.
-//        label.setText("some fortune here")
     }
 
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        self.fortunesModel?.makeFortune(true)
     }
 
     override func didDeactivate() {

@@ -17,8 +17,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         registerNotificationSettings()
+        scheduleDailyFortuneNotification()
         
         return true
+    }
+    
+    func scheduleDailyFortuneNotification() {
+        let dateComponent = NSDateComponents()
+        dateComponent.hour = 12
+        dateComponent.minute = 30
+        let lunchTime = NSCalendar.currentCalendar().dateFromComponents(dateComponent)
+        
+        let firstLocalNotification = UILocalNotification()
+        firstLocalNotification.alertBody = "Your Fortune is here!"
+        firstLocalNotification.category = "NEW_COOKIE_CATEGORY"
+        firstLocalNotification.repeatInterval = NSCalendarUnit.Day
+        firstLocalNotification.fireDate = lunchTime
+        UIApplication.sharedApplication().cancelAllLocalNotifications()
+        UIApplication.sharedApplication().scheduleLocalNotification(firstLocalNotification)
     }
     
     func registerNotificationSettings() {

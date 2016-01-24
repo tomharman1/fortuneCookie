@@ -1,28 +1,125 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MrFortuneCookie" customModuleProvider="target" sceneMemberID="viewController">
-                    <imageView key="view" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app-on-watch" id="I2t-oa-dXB">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0SI-KV-eBj"/>
+                        <viewControllerLayoutGuide type="bottom" id="LgN-P1-e59"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleAspectFill" id="o9v-OI-G2Y">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Std-mb-8hn">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <connections>
+                                    <action selector="gotTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MfM-wL-KbJ"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fortune-guy" translatesAutoresizingMaskIntoConstraints="NO" id="89f-Lf-ZNe" userLabel="image">
+                                <rect key="frame" x="0.0" y="174" width="375" height="226"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NM6-VP-Zlc" userLabel="fortuneLabel" customClass="SpeechBubbleLabel" customModule="MrFortuneCookie" customModuleProvider="target">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="250" id="vMP-6k-d3p"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Right now there's an energy pushing you in a new direction. Some more text. Other Text. A little more still. Just trying to get the button bg to expand</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.0046502976190476719" green="0.0046502976190476719" blue="0.0046502976190476719" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="18" name="Helvetica-Light"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="vMP-6k-d3p"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="vMP-6k-d3p"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                    </imageView>
+                        <constraints>
+                            <constraint firstItem="89f-Lf-ZNe" firstAttribute="centerX" secondItem="o9v-OI-G2Y" secondAttribute="centerX" constant="10" id="8xq-6q-oP5"/>
+                            <constraint firstItem="89f-Lf-ZNe" firstAttribute="centerY" secondItem="o9v-OI-G2Y" secondAttribute="centerY" id="P6K-Ay-tc4"/>
+                            <constraint firstItem="NM6-VP-Zlc" firstAttribute="centerX" secondItem="o9v-OI-G2Y" secondAttribute="centerX" constant="-5" id="Qdd-Bj-MIn"/>
+                            <constraint firstItem="Std-mb-8hn" firstAttribute="centerX" secondItem="o9v-OI-G2Y" secondAttribute="centerX" id="WOO-d6-7vr"/>
+                            <constraint firstItem="Std-mb-8hn" firstAttribute="centerY" secondItem="o9v-OI-G2Y" secondAttribute="centerY" id="Zgp-FY-YAi"/>
+                            <constraint firstItem="NM6-VP-Zlc" firstAttribute="centerY" secondItem="o9v-OI-G2Y" secondAttribute="centerY" id="lqX-XH-IG1"/>
+                            <constraint firstItem="Std-mb-8hn" firstAttribute="top" secondItem="0SI-KV-eBj" secondAttribute="bottom" id="oEi-Zg-ZT3"/>
+                            <constraint firstItem="Std-mb-8hn" firstAttribute="leading" secondItem="o9v-OI-G2Y" secondAttribute="leadingMargin" id="ver-0n-u8I"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Std-mb-8hn" secondAttribute="trailing" id="vfH-nf-qCw"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Std-mb-8hn"/>
+                                <exclude reference="89f-Lf-ZNe"/>
+                                <exclude reference="NM6-VP-Zlc"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="WOO-d6-7vr"/>
+                                <exclude reference="Zgp-FY-YAi"/>
+                                <exclude reference="oEi-Zg-ZT3"/>
+                                <exclude reference="ver-0n-u8I"/>
+                                <exclude reference="vfH-nf-qCw"/>
+                                <exclude reference="Qdd-Bj-MIn"/>
+                                <exclude reference="lqX-XH-IG1"/>
+                                <exclude reference="8xq-6q-oP5"/>
+                                <exclude reference="P6K-Ay-tc4"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Std-mb-8hn"/>
+                                <include reference="89f-Lf-ZNe"/>
+                                <include reference="NM6-VP-Zlc"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="WOO-d6-7vr"/>
+                                <include reference="Zgp-FY-YAi"/>
+                                <include reference="oEi-Zg-ZT3"/>
+                                <include reference="ver-0n-u8I"/>
+                                <include reference="vfH-nf-qCw"/>
+                                <include reference="Qdd-Bj-MIn"/>
+                                <include reference="lqX-XH-IG1"/>
+                                <include reference="8xq-6q-oP5"/>
+                                <include reference="P6K-Ay-tc4"/>
+                            </mask>
+                        </variation>
+                    </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="button" destination="Std-mb-8hn" id="oyi-Mn-0k7"/>
+                        <outlet property="fortuneCookieViewImg" destination="89f-Lf-ZNe" id="1wC-cf-Ehq"/>
+                        <outlet property="fortuneLabel" destination="NM6-VP-Zlc" id="uze-p3-bDe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="415.5" y="373.5"/>
+            <point key="canvasLocation" x="414" y="372.75"/>
         </scene>
     </scenes>
     <resources>
-        <image name="app-on-watch" width="623" height="1053"/>
+        <image name="fortune-guy" width="293" height="229"/>
     </resources>
 </document>
