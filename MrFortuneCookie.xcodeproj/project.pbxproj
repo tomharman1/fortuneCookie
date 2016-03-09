@@ -22,7 +22,6 @@
 		F8AF8A4D1BA5E5CD00FB0BAB /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AF8A4C1BA5E5CD00FB0BAB /* ExtensionDelegate.swift */; };
 		F8AF8A4F1BA5E5CD00FB0BAB /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AF8A4E1BA5E5CD00FB0BAB /* NotificationController.swift */; };
 		F8AF8A511BA5E5CD00FB0BAB /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AF8A501BA5E5CD00FB0BAB /* GlanceController.swift */; };
-		F8AF8A531BA5E5CD00FB0BAB /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AF8A521BA5E5CD00FB0BAB /* ComplicationController.swift */; };
 		F8DA7EA81BA62E5100A07409 /* FortunesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DA7EA71BA62E5100A07409 /* FortunesModel.swift */; };
 		F8F6487D1BF6B3C000632A25 /* NSDataFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F6487C1BF6B3C000632A25 /* NSDataFacade.swift */; };
 /* End PBXBuildFile section */
@@ -108,7 +107,6 @@
 		F8AF8A4C1BA5E5CD00FB0BAB /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		F8AF8A4E1BA5E5CD00FB0BAB /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		F8AF8A501BA5E5CD00FB0BAB /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
-		F8AF8A521BA5E5CD00FB0BAB /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		F8AF8A561BA5E5CD00FB0BAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8DA7EA71BA62E5100A07409 /* FortunesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FortunesModel.swift; sourceTree = "<group>"; };
 		F8F6487C1BF6B3C000632A25 /* NSDataFacade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDataFacade.swift; sourceTree = "<group>"; };
@@ -218,7 +216,6 @@
 				F8AF8A4C1BA5E5CD00FB0BAB /* ExtensionDelegate.swift */,
 				F8AF8A4E1BA5E5CD00FB0BAB /* NotificationController.swift */,
 				F8AF8A501BA5E5CD00FB0BAB /* GlanceController.swift */,
-				F8AF8A521BA5E5CD00FB0BAB /* ComplicationController.swift */,
 				F8AF8A561BA5E5CD00FB0BAB /* Info.plist */,
 				F8AF8A481BA5E5CD00FB0BAB /* Supporting Files */,
 				F8DA7EA71BA62E5100A07409 /* FortunesModel.swift */,
@@ -462,7 +459,6 @@
 				F8DA7EA81BA62E5100A07409 /* FortunesModel.swift in Sources */,
 				F8AF8A4D1BA5E5CD00FB0BAB /* ExtensionDelegate.swift in Sources */,
 				F8F6487D1BF6B3C000632A25 /* NSDataFacade.swift in Sources */,
-				F8AF8A531BA5E5CD00FB0BAB /* ComplicationController.swift in Sources */,
 				F8AF8A511BA5E5CD00FB0BAB /* GlanceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
