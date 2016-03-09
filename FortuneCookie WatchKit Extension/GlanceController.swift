@@ -12,10 +12,13 @@ import Foundation
 
 class GlanceController: WKInterfaceController {
 
+    @IBOutlet var label: WKInterfaceLabel!
+    
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
         // Configure interface objects here.
+//        label.setText("some fortune here")
     }
 
     override func willActivate() {
