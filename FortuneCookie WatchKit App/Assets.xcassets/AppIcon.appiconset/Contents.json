@@ -53,15 +53,6 @@
       "scale" : "2x",
       "role" : "quickLook",
       "subtype" : "42mm"
-    },
-    {
-      "role" : "longLook",
-      "size" : "44x44",
-      "idiom" : "watch",
-      "filename" : "44pt - 42mm Long Look.png",
-      "subtype" : "42mm",
-      "unassigned" : true,
-      "scale" : "2x"
     }
   ],
   "info" : {
