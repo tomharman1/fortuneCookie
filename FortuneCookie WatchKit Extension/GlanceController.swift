@@ -14,15 +14,15 @@ class GlanceController: WKInterfaceController, FortuneControllerProtocol {
 
     @IBOutlet var label: WKInterfaceLabel!
     
-    private var fortunesModel: FortunesModel?
+    fileprivate var fortunesModel: FortunesModel?
 
     override init () {
         super.init()
         fortunesModel = FortunesModel(fortuneController: self)
     }
 
-    func showGreedyMessage(greedyMessage: String) {
-        label.setText(greedyMessage)
+    func showGreedyMessage(message: String) {
+        label.setText(message)
     }
 
     func showFortune(fortune: String) {
@@ -33,14 +33,14 @@ class GlanceController: WKInterfaceController, FortuneControllerProtocol {
         label.setText(fortune)
     }
 
-    override func awakeWithContext(context: AnyObject?) {
-        super.awakeWithContext(context)
+    override func awake(withContext context: Any?) {
+        super.awake(withContext: context)
     }
 
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
-        self.fortunesModel?.makeFortune(true)
+        self.fortunesModel?.makeFortune(isGlance: true)
     }
 
     override func didDeactivate() {

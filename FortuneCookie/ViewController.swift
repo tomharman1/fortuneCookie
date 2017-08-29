@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, FortuneControllerProtocol {
+class ViewController: UIViewController, FortuneControllerProtocol, CAAnimationDelegate {
     
     @IBOutlet var button: UIButton!
     @IBOutlet var fortuneCookieViewImg: UIImageView!
@@ -22,33 +22,32 @@ class ViewController: UIViewController, FortuneControllerProtocol {
     }
     
     deinit {
-        NSNotificationCenter.defaultCenter().removeObserver(self)
+        NotificationCenter.default.removeObserver(self)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        NSNotificationCenter
-            .defaultCenter()
+        NotificationCenter.default
             .addObserver(self, selector:#selector(ViewController.danceAndShowFortune), name:
-                UIApplicationWillEnterForegroundNotification, object: nil)
+                NSNotification.Name.UIApplicationWillEnterForeground, object: nil)
 
-        self.fortuneLabel.opaque = false
+        self.fortuneLabel.isOpaque = false
         self.fortuneLabel.alpha = 0
         self.fortuneLabel.layer.zPosition = -1
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         danceAndShowFortune()
     }
     
-    @IBAction func gotTouch(sender: UIButton) {
+    @IBAction func gotTouch(_ sender: UIButton) {
         danceAndShowFortune()
     }
     
-    func showGreedyMessage(greedyMessage: String) {
-        showFortune(greedyMessage)
+    func showGreedyMessage(message: String) {
+        showFortune(fortune: message)
     }
     
     func showFortune(fortune: String) {
@@ -58,28 +57,28 @@ class ViewController: UIViewController, FortuneControllerProtocol {
         self.fortuneLabel.alpha = 0
         
         // TODO - can we move this into SpeechBubbleLabel ?
-        let speechBubble = UIImage(named: "speech-bubble")!.resizableImageWithCapInsets(UIEdgeInsetsMake(15, 0, 40, 0), resizingMode: UIImageResizingMode.Stretch)
-        let imgSize = self.fortuneLabel.intrinsicContentSize()
+        let speechBubble = UIImage(named: "speech-bubble")!.resizableImage(withCapInsets: UIEdgeInsetsMake(15, 0, 40, 0), resizingMode: UIImageResizingMode.stretch)
+        let imgSize = self.fortuneLabel.intrinsicContentSize
         UIGraphicsBeginImageContextWithOptions(imgSize, false, 0)
-        speechBubble.drawInRect(CGRectMake(0, 0, imgSize.width, imgSize.height))
+        speechBubble.draw(in: CGRect(x: 0, y: 0, width: imgSize.width, height: imgSize.height))
         let newImage = UIGraphicsGetImageFromCurrentImageContext();
         UIGraphicsEndImageContext();
-        self.fortuneLabel.backgroundColor = UIColor(patternImage: newImage)
+        self.fortuneLabel.backgroundColor = UIColor(patternImage: newImage!)
         
         
-        self.fortuneLabel.transform = CGAffineTransformMakeScale(0.5, 0.5)
-        UIView.animateWithDuration(NSTimeInterval(3), animations: {
+        self.fortuneLabel.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+        UIView.animate(withDuration: TimeInterval(3), animations: {
             self.fortuneLabel.transform =
-                CGAffineTransformConcat(CGAffineTransformMakeTranslation(0, -150), CGAffineTransformMakeScale(1.0, 1.0))
+                CGAffineTransform(translationX: 0, y: -150).concatenating(CGAffineTransform(scaleX: 1.0, y: 1.0))
             self.fortuneLabel.alpha = 1.0
             }, completion: {
                 (val:Bool) in
-                self.button.userInteractionEnabled = true
+                self.button.isUserInteractionEnabled = true
         })
     }
     
     func showRanOutOfFortunes(fortune: String) {
-        showFortune(fortune)
+        showFortune(fortune: fortune)
     }
     
     func danceAndShowFortune() {
@@ -87,13 +86,13 @@ class ViewController: UIViewController, FortuneControllerProtocol {
         dance(1, showFortune: true)
     }
     
-    private func dance(numberOfShakes: Int, showFortune: Bool) {
+    fileprivate func dance(_ numberOfShakes: Int, showFortune: Bool) {
         let animateDuration: CFTimeInterval = 0.25
         let beginTime = CACurrentMediaTime()
         var totalDuration: CFTimeInterval = 0
         
         // disable button until fortune shown
-        button.userInteractionEnabled = false
+        button.isUserInteractionEnabled = false
         
         // TODO: Look into replacing this with a KeyFrameAnimation
         //        rightRotate.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
@@ -104,7 +103,7 @@ class ViewController: UIViewController, FortuneControllerProtocol {
             let rightRotate = CABasicAnimation(keyPath: "transform.rotation")
             rightRotate.beginTime = beginTime + totalDuration
             rightRotate.fromValue = 0.0
-            rightRotate.toValue = CGFloat(M_PI * 0.05)
+            rightRotate.toValue = Double.pi * 0.05
             rightRotate.duration = animateDuration
             
             totalDuration += animateDuration
@@ -120,7 +119,7 @@ class ViewController: UIViewController, FortuneControllerProtocol {
             let leftRotate = CABasicAnimation(keyPath: "transform.rotation")
             leftRotate.beginTime = beginTime + totalDuration
             leftRotate.fromValue = returnRotate.toValue
-            leftRotate.toValue = CGFloat(M_PI * -0.05)
+            leftRotate.toValue = Double.pi * -0.05
             leftRotate.duration = animateDuration
             
             totalDuration += animateDuration
@@ -130,19 +129,18 @@ class ViewController: UIViewController, FortuneControllerProtocol {
             lastReturnRotate.fromValue = leftRotate.toValue
             lastReturnRotate.toValue = CGFloat(0)
             lastReturnRotate.duration = animateDuration
-            lastReturnRotate.delegate = self
-            
+            lastReturnRotate.delegate = (self as CAAnimationDelegate)
             totalDuration += animateDuration
             
-            self.fortuneCookieViewImg.layer.addAnimation(rightRotate, forKey: nil)
-            self.fortuneCookieViewImg.layer.addAnimation(returnRotate, forKey: nil)
-            self.fortuneCookieViewImg.layer.addAnimation(leftRotate, forKey: nil)
-            self.fortuneCookieViewImg.layer.addAnimation(lastReturnRotate, forKey: nil)
+            self.fortuneCookieViewImg.layer.add(rightRotate, forKey: nil)
+            self.fortuneCookieViewImg.layer.add(returnRotate, forKey: nil)
+            self.fortuneCookieViewImg.layer.add(leftRotate, forKey: nil)
+            self.fortuneCookieViewImg.layer.add(lastReturnRotate, forKey: nil)
         }
         
         if (showFortune) {
             let triggerTimeSeconds = (Int64(NSEC_PER_SEC) * Int64(totalDuration - 1))
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, triggerTimeSeconds), dispatch_get_main_queue(), { () -> Void in
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(triggerTimeSeconds) / Double(NSEC_PER_SEC), execute: { () -> Void in
                 self.fortunesModel!.makeFortune()
             })
         }

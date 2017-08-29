@@ -13,20 +13,20 @@ class NSDataFacade: NSObject {
     let SEEN_FORTUNES_LIST_KEY = "seenFortunesList"
     let LAST_FORTUNE_ACCESSED_DATE_KEY = "lastFortuneAccessedDate"
     
-    let userDefaults = NSUserDefaults(suiteName:"group.com.tomharman.me.FortuneCookie.userdefaults")
+    let userDefaults = UserDefaults(suiteName:"group.com.tomharman.me.FortuneCookie.userdefaults")
     
     func reset() {
-        userDefaults?.setObject(nil, forKey: LAST_FORTUNE_ACCESSED_DATE_KEY)
-        userDefaults?.setObject(nil, forKey: SEEN_FORTUNES_LIST_KEY)
+        userDefaults?.set(nil, forKey: LAST_FORTUNE_ACCESSED_DATE_KEY)
+        userDefaults?.set(nil, forKey: SEEN_FORTUNES_LIST_KEY)
     }
     
     func saveFortuneLastAccessedNow() {
-        let today = NSDate()
-        userDefaults?.setObject(today, forKey: LAST_FORTUNE_ACCESSED_DATE_KEY)
+        let today = Date()
+        userDefaults?.set(today, forKey: LAST_FORTUNE_ACCESSED_DATE_KEY)
     }
     
-    func getFortuneLastAccessedDate() -> NSDate? {
-        return (userDefaults?.objectForKey(LAST_FORTUNE_ACCESSED_DATE_KEY)) as? NSDate
+    func getFortuneLastAccessedDate() -> Date? {
+        return (userDefaults?.object(forKey: LAST_FORTUNE_ACCESSED_DATE_KEY)) as? Date
     }
     
     func lastShownFortuneIndex() -> Int {
@@ -38,19 +38,19 @@ class NSDataFacade: NSObject {
         return getSeenFortunesList().count
     }
     
-    func isHaveAlreadySeenFortuneWithIndex(i: Int) -> Bool {
-        return getSeenFortunesList().containsObject(i)
+    func isHaveAlreadySeenFortuneWithIndex(index: Int) -> Bool {
+        return getSeenFortunesList().contains(index)
     }
     
-    func sawFortuneWithIndex(i: Int) {
+    func sawFortuneWithIndex(index: Int) {
         let seenFortuneList = getSeenFortunesList()
-        seenFortuneList.addObject(i)
-        userDefaults?.setObject(seenFortuneList, forKey: SEEN_FORTUNES_LIST_KEY)
+        seenFortuneList.add(index)
+        userDefaults?.set(seenFortuneList, forKey: SEEN_FORTUNES_LIST_KEY)
     }
     
     func getSeenFortunesList() -> NSMutableArray {
-        if let fortunesArray = userDefaults?.objectForKey(SEEN_FORTUNES_LIST_KEY) {
-            return fortunesArray.mutableCopy() as! NSMutableArray
+        if let fortunesArray = userDefaults?.object(forKey: SEEN_FORTUNES_LIST_KEY) {
+            return (fortunesArray as AnyObject) as! NSMutableArray
         }
         else {
             return NSMutableArray()

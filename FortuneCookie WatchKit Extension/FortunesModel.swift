@@ -16,14 +16,14 @@ class FortunesModel {
         case ranOutOfFortunes
     }
 
-    private let RAN_OUT_OF_FORTUNES_STR = "You ran out of Fortunes!"
-    private let YOU_ARE_GREEDY_STR = "Wow, you're greedy!\n Come back tomorrow for a New fortune"
+    fileprivate let RAN_OUT_OF_FORTUNES_STR = "You ran out of Fortunes!"
+    fileprivate let YOU_ARE_GREEDY_STR = "Wow, you're greedy!\n Come back tomorrow for a New fortune"
     
-    private let nsDataFacade = NSDataFacade()
+    fileprivate let nsDataFacade = NSDataFacade()
     
-    private var currentFortuneIndex = -1
-    private var state: ShowingState?
-    private let fortuneController: FortuneControllerProtocol
+    fileprivate var currentFortuneIndex = -1
+    fileprivate var state: ShowingState?
+    fileprivate let fortuneController: FortuneControllerProtocol
     
     init (fortuneController: FortuneControllerProtocol) {
         self.fortuneController = fortuneController
@@ -42,29 +42,29 @@ class FortunesModel {
         if (canShowNewFortune) {
             let fortune = self.getFortune()
             if (self.state == ShowingState.ranOutOfFortunes) {
-                self.fortuneController.showRanOutOfFortunes(fortune)
+                self.fortuneController.showRanOutOfFortunes(fortune: fortune)
             }
             else {
-                self.fortuneController.showFortune(fortune)
+                self.fortuneController.showFortune(fortune: fortune)
             }
         }
         else if (self.state == ShowingState.greedy || self.state == nil || isGlance) {
             self.state = ShowingState.fortune
-            self.fortuneController.showFortune(self.getLastShownFortune())
+            self.fortuneController.showFortune(fortune: self.getLastShownFortune())
         }
         else {
             self.state = ShowingState.greedy
-            self.fortuneController.showGreedyMessage(self.YOU_ARE_GREEDY_STR)
+            self.fortuneController.showGreedyMessage(message: self.YOU_ARE_GREEDY_STR)
         }
     }
     
-    private func getFortune() -> String {
+    fileprivate func getFortune() -> String {
         
         while(iHaveAFortuneToShow()) {
             let i = getRandomIndex()
             let fortune = self.getFortunes()[i]
-            if (isValidFortune(i)) {
-                nsDataFacade.sawFortuneWithIndex(i)
+            if (isValidFortune(index: i)) {
+                nsDataFacade.sawFortuneWithIndex(index: i)
                 nsDataFacade.saveFortuneLastAccessedNow()
                 self.state = ShowingState.fortune
                 print("showing fortune: \(i)")
@@ -80,17 +80,17 @@ class FortunesModel {
         return self.RAN_OUT_OF_FORTUNES_STR
     }
 
-    private func getLastShownFortune() -> String {
-        return getFortuneWithIndex(nsDataFacade.lastShownFortuneIndex())
+    fileprivate func getLastShownFortune() -> String {
+        return getFortuneWithIndex(index: nsDataFacade.lastShownFortuneIndex())
     }
     
-    private func canShowFortune()-> Bool {
+    fileprivate func canShowFortune()-> Bool {
         let fortuneLastAccessedDate = nsDataFacade.getFortuneLastAccessedDate()
         if (fortuneLastAccessedDate == nil) {
             return true // no previosuly saved date
         }
         
-        let hoursElapsedSinceLastFortuneAccessed = NSDate().timeIntervalSinceDate(fortuneLastAccessedDate!) / (60 * 60)
+        let hoursElapsedSinceLastFortuneAccessed = Date().timeIntervalSince(fortuneLastAccessedDate! as Date) / (60 * 60)
         if (hoursElapsedSinceLastFortuneAccessed > 12) { // 12
             return true
         }
@@ -99,10 +99,10 @@ class FortunesModel {
         }
     }
     
-    private func getRandomIndex() -> Int {
+    fileprivate func getRandomIndex() -> Int {
         var index = -1
         if (currentFortuneIndex == -1) {
-            index = random()
+            index = Int(arc4random_uniform(UInt32(getFortunes().count)))
         }
         else {
             index = currentFortuneIndex + 1
@@ -110,19 +110,19 @@ class FortunesModel {
         return (index % getFortunes().count)
     }
 
-    private func getFortuneWithIndex(i: Int) -> String {
-        return getFortunes()[i]
+    fileprivate func getFortuneWithIndex(index: Int) -> String {
+        return getFortunes()[index]
     }
     
-    private func iHaveAFortuneToShow() -> Bool {
+    fileprivate func iHaveAFortuneToShow() -> Bool {
         return nsDataFacade.seenFortunesCount() < getFortunes().count
     }
     
-    private func isValidFortune(i: Int) -> Bool {
-        let fortuneLength = self.getFortunes()[i].characters.count
-        return (i != currentFortuneIndex) &&
+    fileprivate func isValidFortune(index: Int) -> Bool {
+        let fortuneLength = self.getFortunes()[index].characters.count
+        return (index != currentFortuneIndex) &&
                 (fortuneLength < getMaxSupportedFortuneLength()) &&
-                    !nsDataFacade.isHaveAlreadySeenFortuneWithIndex(i)
+            !nsDataFacade.isHaveAlreadySeenFortuneWithIndex(index: index)
     }
     
     func getFortunes() -> [String] {

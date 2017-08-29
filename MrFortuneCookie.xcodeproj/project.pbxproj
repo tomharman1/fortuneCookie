@@ -16,8 +16,6 @@
 		F8AF8A151BA5E5CC00FB0BAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8AF8A131BA5E5CC00FB0BAB /* Main.storyboard */; };
 		F8AF8A171BA5E5CC00FB0BAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8AF8A161BA5E5CC00FB0BAB /* Assets.xcassets */; };
 		F8AF8A1A1BA5E5CC00FB0BAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8AF8A181BA5E5CC00FB0BAB /* LaunchScreen.storyboard */; };
-		F8AF8A251BA5E5CC00FB0BAB /* FortuneCookieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AF8A241BA5E5CC00FB0BAB /* FortuneCookieTests.swift */; };
-		F8AF8A301BA5E5CC00FB0BAB /* FortuneCookieUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AF8A2F1BA5E5CC00FB0BAB /* FortuneCookieUITests.swift */; };
 		F8AF8A351BA5E5CC00FB0BAB /* MrFortuneCookie.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F8AF8A341BA5E5CC00FB0BAB /* MrFortuneCookie.app */; };
 		F8AF8A3B1BA5E5CD00FB0BAB /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8AF8A391BA5E5CD00FB0BAB /* Interface.storyboard */; };
 		F8AF8A3D1BA5E5CD00FB0BAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8AF8A3C1BA5E5CD00FB0BAB /* Assets.xcassets */; };
@@ -100,10 +98,8 @@
 		F8AF8A191BA5E5CC00FB0BAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F8AF8A1B1BA5E5CC00FB0BAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8AF8A201BA5E5CC00FB0BAB /* MrFortuneCookie.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MrFortuneCookie.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8AF8A241BA5E5CC00FB0BAB /* FortuneCookieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FortuneCookieTests.swift; sourceTree = "<group>"; };
 		F8AF8A261BA5E5CC00FB0BAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8AF8A2B1BA5E5CC00FB0BAB /* MrFortuneCookie.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MrFortuneCookie.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8AF8A2F1BA5E5CC00FB0BAB /* FortuneCookieUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FortuneCookieUITests.swift; sourceTree = "<group>"; };
 		F8AF8A311BA5E5CC00FB0BAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8AF8A341BA5E5CC00FB0BAB /* MrFortuneCookie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MrFortuneCookie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8AF8A3A1BA5E5CD00FB0BAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -196,7 +192,6 @@
 		F8AF8A231BA5E5CC00FB0BAB /* FortuneCookieTests */ = {
 			isa = PBXGroup;
 			children = (
-				F8AF8A241BA5E5CC00FB0BAB /* FortuneCookieTests.swift */,
 				F8AF8A261BA5E5CC00FB0BAB /* Info.plist */,
 			);
 			path = FortuneCookieTests;
@@ -205,7 +200,6 @@
 		F8AF8A2E1BA5E5CC00FB0BAB /* FortuneCookieUITests */ = {
 			isa = PBXGroup;
 			children = (
-				F8AF8A2F1BA5E5CC00FB0BAB /* FortuneCookieUITests.swift */,
 				F8AF8A311BA5E5CC00FB0BAB /* Info.plist */,
 			);
 			path = FortuneCookieUITests;
@@ -343,12 +337,13 @@
 		F8AF8A041BA5E5CC00FB0BAB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Toms Apps";
 				TargetAttributes = {
 					F8AF8A0B1BA5E5CC00FB0BAB = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = 5YFM8BW7RJ;
+						LastSwiftMigration = 0830;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -357,17 +352,21 @@
 					};
 					F8AF8A1F1BA5E5CC00FB0BAB = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0830;
 						TestTargetID = F8AF8A0B1BA5E5CC00FB0BAB;
 					};
 					F8AF8A2A1BA5E5CC00FB0BAB = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0830;
 						TestTargetID = F8AF8A0B1BA5E5CC00FB0BAB;
 					};
 					F8AF8A331BA5E5CC00FB0BAB = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0830;
 					};
 					F8AF8A421BA5E5CD00FB0BAB = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0830;
 					};
 				};
 			};
@@ -455,7 +454,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8AF8A251BA5E5CC00FB0BAB /* FortuneCookieTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,7 +461,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8AF8A301BA5E5CC00FB0BAB /* FortuneCookieUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,8 +544,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -591,8 +590,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -611,6 +612,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -625,6 +627,7 @@
 				PRODUCT_NAME = MrFortuneCookie;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -640,6 +643,7 @@
 				PRODUCT_NAME = MrFortuneCookie;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -648,15 +652,16 @@
 		F8AF8A5E1BA5E5CD00FB0BAB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = FortuneCookie_WatchKit_Extension;
 				INFOPLIST_FILE = "FortuneCookie WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tomharman.me.MrFortuneCookie.watchkitapp;
 				PRODUCT_NAME = MrFortuneCookie;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -665,15 +670,16 @@
 		F8AF8A5F1BA5E5CD00FB0BAB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = FortuneCookie_WatchKit_Extension;
 				INFOPLIST_FILE = "FortuneCookie WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tomharman.me.MrFortuneCookie.watchkitapp;
 				PRODUCT_NAME = MrFortuneCookie;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -691,6 +697,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tomharman.me.MrFortuneCookie;
 				PRODUCT_NAME = MrFortuneCookie;
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
@@ -707,6 +714,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tomharman.me.MrFortuneCookie;
 				PRODUCT_NAME = MrFortuneCookie;
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
@@ -719,6 +727,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tomharman.me.FortuneCookieTests;
 				PRODUCT_NAME = MrFortuneCookie;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MrFortuneCookie.app/MrFortuneCookie";
 			};
 			name = Debug;
@@ -731,6 +740,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tomharman.me.FortuneCookieTests;
 				PRODUCT_NAME = MrFortuneCookie;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MrFortuneCookie.app/MrFortuneCookie";
 			};
 			name = Release;
@@ -742,6 +752,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tomharman.me.FortuneCookieUITests;
 				PRODUCT_NAME = MrFortuneCookie;
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = FortuneCookie;
 				USES_XCTRUNNER = YES;
 			};
@@ -754,6 +765,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tomharman.me.FortuneCookieUITests;
 				PRODUCT_NAME = MrFortuneCookie;
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = FortuneCookie;
 				USES_XCTRUNNER = YES;
 			};

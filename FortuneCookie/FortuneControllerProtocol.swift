@@ -9,7 +9,7 @@
 import Foundation
 
 protocol FortuneControllerProtocol {
-    func showGreedyMessage(greedyMessage: String)
+    func showGreedyMessage(message: String)
     func showFortune(fortune: String)
     func showRanOutOfFortunes(fortune: String)
 }

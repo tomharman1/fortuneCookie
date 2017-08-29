@@ -15,7 +15,7 @@ class PhoneFortunesModel: FortunesModel {
     override init(fortuneController: FortuneControllerProtocol) {
         super.init(fortuneController: fortuneController)
         var fortunes = super.getFortunes()
-        fortunes.appendContentsOf(getPhoneFortunes())
+        fortunes.append(contentsOf: getPhoneFortunes())
         self.phoneFortunes = fortunes
     }
     
@@ -27,7 +27,7 @@ class PhoneFortunesModel: FortunesModel {
         return phoneFortunes
     }
     
-    private func getPhoneFortunes() -> [String] {
+    fileprivate func getPhoneFortunes() -> [String] {
         return ["If you refuse to accept anything but the best, you very often get it.",
                 "Hidden in a valley beside an open stream- This will be the type of place where you will find your dream.",
                 "What ever you're goal is in life, embrace it visualize it, and for it will be yours.",
