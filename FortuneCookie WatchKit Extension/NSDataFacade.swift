@@ -45,12 +45,13 @@ class NSDataFacade: NSObject {
     func sawFortuneWithIndex(index: Int) {
         let seenFortuneList = getSeenFortunesList()
         seenFortuneList.add(index)
-        userDefaults?.set(seenFortuneList, forKey: SEEN_FORTUNES_LIST_KEY)
+        userDefaults?.setValue(seenFortuneList.copy(), forKey: SEEN_FORTUNES_LIST_KEY)
+        userDefaults?.synchronize()
     }
     
     func getSeenFortunesList() -> NSMutableArray {
-        if let fortunesArray = userDefaults?.object(forKey: SEEN_FORTUNES_LIST_KEY) {
-            return (fortunesArray as AnyObject) as! NSMutableArray
+        if let fortunesArray = userDefaults?.mutableArrayValue(forKey: SEEN_FORTUNES_LIST_KEY) {
+            return fortunesArray
         }
         else {
             return NSMutableArray()
