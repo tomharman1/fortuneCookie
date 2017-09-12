@@ -81,7 +81,7 @@ class ViewController: UIViewController, FortuneControllerProtocol, CAAnimationDe
         showFortune(fortune: fortune)
     }
     
-    func danceAndShowFortune() {
+    @objc func danceAndShowFortune() {
         self.fortuneLabel.alpha = 0
         dance(1, showFortune: true)
     }
